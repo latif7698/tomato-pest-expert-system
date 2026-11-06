@@ -1,0 +1,43 @@
+{
+  "knowledge_version": "demo-001",
+  "domain": "tomato_pests",
+  "mode": "demo",
+  "pests": [
+    {
+      "id": "P_SYN_1",
+      "name": "Hama sintetis A",
+      "description": "Hanya fixture pengujian, bukan hama nyata",
+      "source_ids": ["S_SYN"]
+    }
+  ],
+  "symptoms": [
+    {"id": "G_SYN_1", "label": "Gejala sintetis A", "source_ids": ["S_SYN"]},
+    {"id": "G_SYN_2", "label": "Gejala sintetis B", "source_ids": ["S_SYN"]}
+  ],
+  "rules": [
+    {
+      "pest_id": "P_SYN_1",
+      "symptom_id": "G_SYN_1",
+      "cf_expert": 0.8,
+      "source_id": "S_SYN",
+      "source_locator": "fixture sintetis",
+      "validation_status": "synthetic"
+    },
+    {
+      "pest_id": "P_SYN_1",
+      "symptom_id": "G_SYN_2",
+      "cf_expert": 0.6,
+      "source_id": "S_SYN",
+      "source_locator": "fixture sintetis",
+      "validation_status": "synthetic"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S_SYN",
+      "title": "Fixture sintetis, bukan referensi domain",
+      "url": null,
+      "access_status": "synthetic"
+    }
+  ]
+}

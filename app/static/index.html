@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Identifikasi Dugaan Hama Tomat</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <script type="module" src="/static/js/consultation.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <div>
+          <p class="eyebrow">Sistem pakar · tanaman tomat</p>
+          <h1>Identifikasi dugaan hama dari gejala</h1>
+          <p class="intro">Pilih gejala yang Anda amati dan keyakinan pengamatannya. Sistem menampilkan dukungan Certainty Factor (CF) beserta langkah hitungnya.</p>
+        </div>
+        <div id="mode-badge" class="mode-badge" aria-live="polite">Memuat mode pengetahuan…</div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="notice" aria-label="Batas hasil">
+        <strong>Hasil adalah dugaan, bukan identifikasi pasti.</strong>
+        <p>Nilai CF bukan probabilitas terkalibrasi atau akurasi. Sistem ini hanya menampilkan kelas hama tomat; penyakit non-hama dan kekurangan nutrisi tidak termasuk. Gejala yang tidak dipilih tidak dihitung sebagai bukti negatif.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="consult-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">01 · Konsultasi</p>
+            <h2 id="consult-title">Gejala yang diamati</h2>
+          </div>
+          <p id="knowledge-version" class="version">Versi pengetahuan: memuat…</p>
+        </div>
+        <p class="muted">Centang gejala yang terlihat, lalu pilih tingkat keyakinan pengamatan. Skala 0,25–1,00 adalah pilihan desain yang belum divalidasi, bukan bobot pakar dari jurnal. Anda juga boleh mengirim tanpa memilih gejala untuk melihat keadaan tanpa dukungan.</p>
+        <form id="consultation-form">
+          <div id="symptom-list" class="symptom-list" aria-live="polite">Memuat daftar gejala…</div>
+          <div class="form-actions">
+            <button id="submit-button" type="submit" disabled>Hitung dukungan CF</button>
+            <span id="form-status" role="status" aria-live="polite"></span>
+          </div>
+        </form>
+      </section>
+
+      <section id="result-section" class="panel result-panel" aria-labelledby="result-title" tabindex="-1" hidden>
+        <p class="eyebrow">02 · Hasil konsultasi</p>
+        <h2 id="result-title">Peringkat dugaan</h2>
+        <div id="result-content" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="wrap footer">Prototipe tugas kuliah. Data dalam mode demo sepenuhnya sintetis dan bukan pengetahuan hama nyata.</footer>
+  </body>
+</html>
