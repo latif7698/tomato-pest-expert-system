@@ -208,5 +208,6 @@ def test_verified_environment_never_selects_demo(monkeypatch):
     selected = read_config()
     assert selected.mode == "verified"
     assert selected.knowledge_path.name == "knowledge_verified.json"
-    with pytest.raises(KnowledgeLoadError):
-        create_app(selected)
+    app = create_app(selected)
+    assert app.state.knowledge.mode == "verified"
+    assert app.state.knowledge.knowledge_version == "l04-2026-11-08-v1"

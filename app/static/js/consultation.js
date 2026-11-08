@@ -7,6 +7,8 @@ const button = document.querySelector("#submit-button");
 const status = document.querySelector("#form-status");
 const modeBadge = document.querySelector("#mode-badge");
 const version = document.querySelector("#knowledge-version");
+const modeExplanation = document.querySelector("#mode-explanation");
+const footerNote = document.querySelector("#footer-note");
 
 function setStatus(message, isError = false) {
   status.textContent = message;
@@ -49,9 +51,14 @@ async function initialize() {
   try {
     const data = await getSymptoms();
     modeBadge.className = `mode-badge ${data.mode}`;
-    modeBadge.textContent = data.mode === "demo"
-      ? "MODE DEMO · DATA SINTETIS"
-      : "MODE PENGETAHUAN TERVERIFIKASI";
+    if (data.mode === "demo") {
+      modeBadge.textContent = "MODE DEMO · DATA SINTETIS";
+      modeExplanation.textContent = "Data demo sepenuhnya sintetis dan hanya untuk mencoba alur aplikasi.";
+    } else {
+      modeBadge.textContent = "SUMBER DIPERIKSA";
+      modeExplanation.textContent = "Data ini adaptasi CF positif dari L04: aturan AND diuraikan per gejala dan enam relasi negatif tidak dihitung. Skala keyakinan pengamatan belum divalidasi. Sumber diperiksa manusia, bukan divalidasi pakar; belum ada bukti akurasi khusus hama.";
+      footerNote.textContent = "Prototipe tugas kuliah. Sumber diperiksa; hasil bukan diagnosis pasti dan belum diuji terhadap kasus hama berlabel pakar.";
+    }
     version.textContent = `Versi pengetahuan: ${data.knowledge_version}`;
     renderSymptoms(data.symptoms);
     button.disabled = false;

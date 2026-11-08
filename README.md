@@ -2,7 +2,7 @@
 
 Proyek tugas kuliah untuk mengidentifikasi **dugaan hama** tanaman tomat dari gejala yang dimasukkan manual. MVP yang direncanakan memakai Certainty Factor (CF) dukungan positif, menampilkan peringkat dugaan dan jejak hitung. Nilai CF bukan identifikasi pasti, probabilitas terkalibrasi, atau ukuran akurasi.
 
-**Status:** inti Sprint 1 dan alur web Sprint 2 sudah dibuat dengan data demo sintetis. Uji unit/API dan alur DOM telah dijalankan; browser sungguhan serta Ruff belum dapat dijalankan dalam sandbox ini. Pengetahuan hama nyata belum diverifikasi. Artikel awal mencakup hama serta penyakit; proyek membatasi kelas keluaran pada hama. Jumlah awal 3–5 hama dan 10–20 gejala adalah perkiraan, bukan target data yang sudah terpenuhi.
+**Status:** aplikasi menyediakan mode demo sintetis dan mode verified dengan lima hama, 10 gejala, dan 11 relasi positif dari L04. `verified` berarti sumber diperiksa manusia pada 2026-11-08 menurut D-17, bukan validasi pakar. Ini adaptasi CF positif: aturan AND diuraikan per gejala dan enam relasi negatif tidak dihitung. Skala keyakinan pengguna belum divalidasi; belum ada bukti akurasi khusus hama atau kelayakan lapangan.
 
 ## Peta dokumen
 
@@ -17,12 +17,12 @@ Proyek tugas kuliah untuk mengidentifikasi **dugaan hama** tanaman tomat dari ge
 1. Telaah scope, keputusan, backlog, dan sprint aktif; tentukan mode demo atau terverifikasi.
 2. Sprint 1: skema pengetahuan, loader, mesin CF murni, dan pengujian unit dengan fixture sintetis. Kode inti sudah ada; lihat [board](docs/scrum/BOARD.md) untuk bukti dan status terkini.
 3. Sprint 2: API, antarmuka, dan alur konsultasi lengkap. Implementasi tersedia; lihat [board](docs/scrum/BOARD.md) untuk status verifikasi.
-4. Verifikasi sumber dan pengetahuan hama; lanjutkan Sprint 3 untuk integrasi data nyata dan evaluasi kasus berlabel pakar. Bagian ini tetap terblokir sampai bukti tersedia.
+4. Pemeriksaan sumber manusia dan integrasi data nyata Sprint 3 telah dilakukan; lihat [audit](docs/knowledge/L04_HUMAN_AUDIT_RESOLUTION_2026-11-08.md). Evaluasi kasus berlabel pakar masih tertunda.
 
-Instruksi sesi implementasi ada di [AGENTS.md](AGENTS.md). Tidak ada data hama nyata yang disediakan pada tahap ini.
+Instruksi sesi implementasi ada di [AGENTS.md](AGENTS.md).
 
 ## Menjalankan prototipe dan uji pada lingkungan dengan akses dependency
 
-Gunakan Python 3.12, buat `.venv`, instal dependensi terpin dari `requirements-dev.txt`, lalu jalankan `uvicorn app.main:app` dan buka `http://127.0.0.1:8000/`. Mode default `demo` membaca `data/demo/knowledge_demo.json`. Set `KNOWLEDGE_MODE=verified` hanya setelah dataset terverifikasi tersedia; mode ini gagal jelas bila berkas tidak ada. Jalankan `python -m pytest tests` dan `ruff check app tests`. Versi runtime terpasang dicatat dalam `requirements-lock.txt`. Di sandbox saat ini, pytest/HTTPX dijalankan dari instalasi lokal lain; server tidak dapat bind ke localhost dan browser tidak dapat diluncurkan. Lihat [log kerja](docs/scrum/WORK_LOG.md).
+Gunakan Python 3.12, buat `.venv`, instal dependensi terpin dari `requirements-dev.txt`, lalu jalankan `KNOWLEDGE_MODE=verified uvicorn app.main:app` dan buka `http://127.0.0.1:8000/`. Mode verified membaca `data/verified/knowledge_verified.json`; mode default `demo` membaca `data/demo/knowledge_demo.json`. Loader menolak mode yang tidak cocok dan tidak beralih otomatis ke demo. Jalankan `python -m pytest tests` dan `ruff check app tests`. Versi runtime terpasang dicatat dalam `requirements-lock.txt`. Hasil pemeriksaan aktual ada di [log kerja](docs/scrum/WORK_LOG.md).
 
-Untuk pemeriksaan browser di lingkungan yang mengizinkan localhost, instal dependency pengujian Node dari `package.json`, sediakan browser Chromium Playwright, jalankan server di atas, lalu jalankan `npm run test:browser`. Skrip di `tests/browser_flow.cjs` memeriksa alur konsultasi nyata, lebar 375/768/1280 piksel, dan navigasi keyboard; skenario seri/error pada UI memakai respons sintetis yang disisipkan oleh tes. Hasil screenshot disimpan di `/tmp` untuk tinjauan visual. Skrip tersebut belum berhasil dieksekusi dalam sandbox ini.
+Untuk pemeriksaan browser di lingkungan yang mengizinkan localhost, instal dependency pengujian Node dari `package.json` dan sediakan Chromium Playwright. Jalankan server verified di atas lalu `npm run test:browser:verified`; skrip ini memeriksa label mode, batas metode, konsultasi, sumber, jejak, kondisi tanpa dukungan, dan lebar layar. Untuk mode demo, jalankan server tanpa `KNOWLEDGE_MODE` lalu `npm run test:browser`. Hasil aktual dan batas lingkungan dicatat di [log kerja](docs/scrum/WORK_LOG.md).

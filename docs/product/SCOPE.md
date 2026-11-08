@@ -10,4 +10,4 @@ Di luar MVP: foto/CNN, chatbot, IoT, training ML, login, dashboard admin, databa
 
 ## Status dan batas data
 
-Target awal 3–5 hama serta 10–20 gejala hanyalah perkiraan scope. Jumlah akhir mengikuti sumber yang dapat diperiksa. Daftar hama, gejala, aturan, bobot CF, penanganan, dan kasus berlabel pakar belum tersedia/terverifikasi; lihat [register sumber](../knowledge/SOURCE_REGISTER.md). Software dapat dibangun dengan fixture sintetis yang jelas berlabel, sedangkan integrasi nyata dan evaluasi domain tetap terblokir.
+Target awal 3–5 hama serta 10–20 gejala hanyalah perkiraan scope. Snapshot L04 yang diperiksa manusia pada 2026-11-08 memuat lima hama, 10 gejala, dan 11 relasi positif. Status `verified` berarti sumber dan locator diperiksa menurut D-17; ini adaptasi CF positif dari L04, bukan validasi pakar. Penanganan tidak tersedia. Kasus berlabel pakar, evaluasi akurasi lapangan, dan bukti kelayakan penggunaan lapangan belum tersedia; lihat [register sumber](../knowledge/SOURCE_REGISTER.md).

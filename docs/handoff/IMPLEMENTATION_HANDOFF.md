@@ -1,6 +1,6 @@
 # Handoff langsung untuk Sprint 1
 
-**Status:** pengguna telah meminta Sprint 1; implementasi inti dan pengujian unit sudah dikerjakan. B-05 masih Review karena Ruff belum tersedia offline. Untuk melanjutkan, baca [AGENTS.md](../../AGENTS.md), [scope](../product/SCOPE.md), [keputusan](../decisions/DECISION_LOG.md), [Sprint 1](../scrum/SPRINT_01.md), [spesifikasi pengetahuan](../knowledge/KNOWLEDGE_SPEC.md), dan [metode CF](../method/CERTAINTY_FACTOR.md).
+**Catatan sejarah Sprint 1:** isi handoff di bawah menggambarkan keadaan awal implementasi. Status terkini: mode verified L04 aktif menurut D-17 setelah pemeriksaan manusia 2026-11-08; lihat [board](../scrum/BOARD.md), [audit](../knowledge/L04_HUMAN_AUDIT_RESOLUTION_2026-11-08.md), dan [WORK_LOG](../scrum/WORK_LOG.md). B-05 masih Review karena enam temuan Ruff lama, bukan karena Ruff belum tersedia. Untuk melanjutkan, baca [AGENTS.md](../../AGENTS.md), [scope](../product/SCOPE.md), [keputusan](../decisions/DECISION_LOG.md), [Sprint 3](../scrum/SPRINT_03.md), [spesifikasi pengetahuan](../knowledge/KNOWLEDGE_SPEC.md), dan [metode CF](../method/CERTAINTY_FACTOR.md).
 
 ## Urutan kerja
 

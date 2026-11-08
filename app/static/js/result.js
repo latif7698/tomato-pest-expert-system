@@ -14,8 +14,8 @@ function number(value) {
   return Number(value).toFixed(4);
 }
 
-function addSources(container, sources) {
-  const heading = element("p", "Sumber informasi:");
+function addSources(container, sources, mode) {
+  const heading = element("p", mode === "verified" ? "Sumber diperiksa:" : "Sumber informasi:");
   const list = document.createElement("ul");
   list.className = "source-list";
   for (const source of sources) {
@@ -64,7 +64,7 @@ function addTrace(trace) {
 export async function renderResult(result) {
   section.hidden = false;
   content.replaceChildren();
-  const mode = result.mode === "demo" ? "DEMO · DATA SINTETIS" : "PENGETAHUAN TERVERIFIKASI";
+  const mode = result.mode === "demo" ? "DEMO · DATA SINTETIS" : "SUMBER DIPERIKSA · BUKAN VALIDASI PAKAR";
   content.append(element("p", `${mode} · Versi ${result.knowledge_version}`, "result-meta"));
   if (result.status === "no_support") {
     content.append(element("p", "Belum ada dukungan positif dari gejala yang dipilih. Tidak ada dugaan hama yang dapat ditampilkan."));
@@ -84,7 +84,7 @@ export async function renderResult(result) {
       const details = await getPest(candidate.pest_id);
       card.append(element("p", details.pest.description));
       if (details.pest.handling) card.append(element("p", `Penanganan: ${details.pest.handling}`));
-      addSources(card, details.pest.sources);
+      addSources(card, details.pest.sources, result.mode);
     } catch {
       card.append(element("p", "Detail hama belum tersedia.", "error"));
     }
