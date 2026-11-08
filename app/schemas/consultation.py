@@ -29,7 +29,8 @@ class ObservationInput(StrictModel):
     @classmethod
     def valid_user_cf(cls, value: object) -> float:
         if isinstance(value, bool) or not isinstance(value, (int, float)):
-            raise ValueError("cf_user must be numeric")
+            # Pydantic does not wrap TypeError from validators as ValidationError.
+            raise ValueError("cf_user must be numeric")  # noqa: TRY004
         try:
             number = float(value)
         except OverflowError as exc:

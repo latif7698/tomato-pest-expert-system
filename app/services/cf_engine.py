@@ -3,8 +3,9 @@
 from __future__ import annotations
 
 import math
+from collections.abc import Sequence
 from dataclasses import dataclass
-from typing import Literal, Sequence
+from typing import Literal
 
 from app.schemas.knowledge import KnowledgeBase
 
@@ -57,7 +58,8 @@ def calculate_cf(knowledge: KnowledgeBase, observations: Sequence[Observation]) 
     selected: dict[str, float] = {}
     for observation in observations:
         if not isinstance(observation, Observation):
-            raise ValueError("observation has invalid structure")
+            # Keep all invalid observations under the same ValueError contract.
+            raise ValueError("observation has invalid structure")  # noqa: TRY004
         if observation.symptom_id not in known_symptoms:
             raise ValueError("unknown symptom_id")
         value = observation.cf_user
