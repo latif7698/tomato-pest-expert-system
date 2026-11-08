@@ -1,7 +1,10 @@
 """Thin API endpoints with controlled error responses."""
 
 from fastapi import APIRouter, HTTPException, Request
+from sqlalchemy import text
+from sqlalchemy.exc import SQLAlchemyError
 
+from app.db.store import save_consultation
 from app.schemas.consultation import (
     ConsultationRequest,
     ConsultationResponse,
@@ -11,6 +14,26 @@ from app.schemas.consultation import (
 from app.services.consultation_service import consult, get_pest, list_symptoms
 
 router = APIRouter()
+
+
+@router.get("/healthz")
+def health(request: Request) -> dict[str, str]:
+    engine = request.app.state.db_engine
+    if engine is not None:
+        try:
+            with engine.connect() as connection:
+                connection.execute(text("SELECT 1"))
+        except SQLAlchemyError as exc:
+            raise HTTPException(
+                status_code=503,
+                detail={
+                    "error": {
+                        "code": "storage_unavailable",
+                        "message": "Penyimpanan sedang tidak tersedia.",
+                    }
+                },
+            ) from exc
+    return {"status": "ok"}
 
 
 @router.get("/symptoms", response_model=SymptomsResponse)
@@ -30,13 +53,26 @@ async def pest_detail(pest_id: str, request: Request) -> PestResponse:
 
 
 @router.post("/consultations", response_model=ConsultationResponse)
-async def create_consultation(
-    payload: ConsultationRequest, request: Request
-) -> ConsultationResponse:
+def create_consultation(payload: ConsultationRequest, request: Request) -> ConsultationResponse:
     try:
-        return consult(request.app.state.knowledge, payload)
+        result = consult(request.app.state.knowledge, payload)
     except ValueError as exc:
         raise HTTPException(
             status_code=422,
             detail={"error": {"code": "invalid_input", "message": "Input konsultasi tidak valid."}},
         ) from exc
+    engine = request.app.state.db_engine
+    if engine is not None:
+        try:
+            save_consultation(engine, payload, result)
+        except SQLAlchemyError as exc:
+            raise HTTPException(
+                status_code=503,
+                detail={
+                    "error": {
+                        "code": "storage_unavailable",
+                        "message": "Penyimpanan sedang tidak tersedia.",
+                    }
+                },
+            ) from exc
+    return result

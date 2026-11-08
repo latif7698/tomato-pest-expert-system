@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: tomato-pest-expert-system
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /healthz
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: KNOWLEDGE_MODE
+        value: verified
+      - key: KNOWLEDGE_BACKEND
+        value: postgres
+      - key: KNOWLEDGE_VERSION
+        value: l04-2026-11-08-v1
+      - key: DATABASE_URL
+        sync: false
