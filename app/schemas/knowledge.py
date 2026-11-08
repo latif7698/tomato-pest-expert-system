@@ -55,7 +55,8 @@ class Rule(StrictModel):
     @classmethod
     def check_cf_expert(cls, value: object) -> float:
         if isinstance(value, bool) or not isinstance(value, (int, float)):
-            raise ValueError("cf_expert must be numeric, not boolean")
+            # Keep invalid snapshots within the loader's ValidationError handling.
+            raise ValueError("cf_expert must be numeric, not boolean")  # noqa: TRY004
         try:
             number = float(value)
         except OverflowError as exc:

@@ -148,8 +148,10 @@ def test_each_proposed_user_confidence_is_accepted(confidence):
         '{"observations":"wrong"}',
         '{broken',
         '{"observations":[{"symptom_id":"G_SYN_1"}]}',
-        '{"observations":[{"symptom_id":"G_SYN_1","cf_user":1.0},'
-        '{"symptom_id":"G_SYN_1","cf_user":0.5}]}',
+        (
+            '{"observations":[{"symptom_id":"G_SYN_1","cf_user":1.0},'
+            '{"symptom_id":"G_SYN_1","cf_user":0.5}]}'
+        ),
         '{"observations":[{"symptom_id":"missing","cf_user":1.0}]}',
         '{"observations":[{"symptom_id":"G_SYN_1","cf_user":0}]}',
         '{"observations":[{"symptom_id":"G_SYN_1","cf_user":1.1}]}',

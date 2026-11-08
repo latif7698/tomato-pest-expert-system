@@ -23,4 +23,4 @@ Dengan HTTPX, periksa ketiga endpoint, JSON, 404, 422 tanpa traceback/path, `no_
 
 ## C. Evaluasi ketepatan domain
 
-Dataset dengan sumber yang diperiksa manusia sudah tersedia menurut D-17; evaluasi domain tetap tertunda sampai ada kasus berlabel pakar. Catat jumlah kasus, asal dan label pembanding, prediksi, kesalahan per kasus, metrik yang dipilih beserta definisinya, serta batas kesimpulan (R-13). Pisahkan kasus evaluasi dari kasus yang dipakai memilih/menyetel bobot; jika pemisahan gagal, jangan laporkan sebagai uji independen. Kelulusan uji A/B tidak membuktikan ketepatan identifikasi lapangan.
+Dataset dengan sumber yang diperiksa manusia sudah tersedia menurut D-17; evaluasi domain tetap tertunda sampai ada kasus berlabel pakar. Gunakan [protokol evaluasi domain](DOMAIN_EVALUATION_PROTOCOL.md) dan template kasus di `data/evaluation/` untuk mencatat asal kasus, label pembanding, prediksi, metrik, serta batas kesimpulan (R-13). Pisahkan kasus evaluasi dari kasus yang dipakai memilih/menyetel bobot; jika pemisahan gagal, jangan laporkan sebagai uji independen. Kelulusan uji A/B tidak membuktikan ketepatan identifikasi lapangan.

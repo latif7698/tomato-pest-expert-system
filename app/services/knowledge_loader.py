@@ -15,11 +15,14 @@ class KnowledgeLoadError(ValueError):
     """The selected snapshot cannot be safely loaded."""
 
 
+DEFAULT_DATA_ROOT = Path(__file__).resolve().parents[2] / "data"
+
+
 def load_knowledge(
     path: Path,
     *,
     expected_mode: Literal["demo", "verified"],
-    data_root: Path = Path(__file__).resolve().parents[2] / "data",
+    data_root: Path = DEFAULT_DATA_ROOT,
 ) -> KnowledgeBase:
     """Load only a file under the explicitly selected mode directory.
 
