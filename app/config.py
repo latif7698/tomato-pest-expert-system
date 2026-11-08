@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Literal
 
 Mode = Literal["demo", "verified"]
+Backend = Literal["json", "postgres"]
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -16,6 +17,9 @@ class AppConfig:
     mode: Mode
     data_root: Path
     knowledge_path: Path
+    backend: Backend = "json"
+    database_url: str | None = None
+    knowledge_version: str | None = None
 
 
 def read_config() -> AppConfig:
@@ -26,4 +30,18 @@ def read_config() -> AppConfig:
     mode: Mode = raw_mode
     data_root = PROJECT_ROOT / "data"
     filename = "knowledge_demo.json" if mode == "demo" else "knowledge_verified.json"
-    return AppConfig(mode=mode, data_root=data_root, knowledge_path=data_root / mode / filename)
+    backend = os.environ.get("KNOWLEDGE_BACKEND", "json")
+    if backend not in ("json", "postgres"):
+        raise ValueError("KNOWLEDGE_BACKEND must be json or postgres")
+    database_url = os.environ.get("DATABASE_URL") if backend == "postgres" else None
+    version = os.environ.get("KNOWLEDGE_VERSION") if backend == "postgres" else None
+    if backend == "postgres" and (mode != "verified" or not database_url or not version):
+        raise ValueError("Postgres requires verified mode, DATABASE_URL and KNOWLEDGE_VERSION")
+    return AppConfig(
+        mode=mode,
+        data_root=data_root,
+        knowledge_path=data_root / mode / filename,
+        backend=backend,
+        database_url=database_url,
+        knowledge_version=version,
+    )

@@ -8,6 +8,7 @@ Proyek tugas kuliah untuk mengidentifikasi **dugaan hama** tanaman tomat dari ge
 
 - Produk: [scope](docs/product/SCOPE.md), [requirements](docs/product/REQUIREMENTS.md).
 - Rancangan: [overview](docs/architecture/OVERVIEW.md), [struktur proyek](docs/architecture/PROJECT_STRUCTURE.md), [kontrak API](docs/architecture/API_CONTRACT.md), [metode CF](docs/method/CERTAINTY_FACTOR.md).
+- Persistensi/deploy pasca-MVP: [panduan PostgreSQL, Neon, dan Render](docs/architecture/POSTGRES_DEPLOYMENT.md), [Sprint 4](docs/scrum/SPRINT_04.md).
 - Pengetahuan: [spesifikasi](docs/knowledge/KNOWLEDGE_SPEC.md), [register sumber](docs/knowledge/SOURCE_REGISTER.md), [daftar verifikasi](docs/knowledge/VERIFICATION_CHECKLIST.md), [status data](data/README.md).
 - Mutu: [rencana uji](docs/testing/TEST_PLAN.md), [kriteria penerimaan](docs/testing/ACCEPTANCE_CRITERIA.md).
 - Kerja: [backlog](docs/scrum/PRODUCT_BACKLOG.md), [board](docs/scrum/BOARD.md), [Sprint 1](docs/scrum/SPRINT_01.md), [Sprint 2](docs/scrum/SPRINT_02.md), [Sprint 3](docs/scrum/SPRINT_03.md), [log kerja](docs/scrum/WORK_LOG.md), [keputusan](docs/decisions/DECISION_LOG.md), [handoff implementasi](docs/handoff/IMPLEMENTATION_HANDOFF.md).
@@ -18,6 +19,7 @@ Proyek tugas kuliah untuk mengidentifikasi **dugaan hama** tanaman tomat dari ge
 2. Sprint 1: skema pengetahuan, loader, mesin CF murni, dan pengujian unit dengan fixture sintetis. Kode inti sudah ada; lihat [board](docs/scrum/BOARD.md) untuk bukti dan status terkini.
 3. Sprint 2: API, antarmuka, dan alur konsultasi lengkap. Implementasi tersedia; lihat [board](docs/scrum/BOARD.md) untuk status verifikasi.
 4. Pemeriksaan sumber manusia dan integrasi data nyata Sprint 3 telah dilakukan; lihat [audit](docs/knowledge/L04_HUMAN_AUDIT_RESOLUTION_2026-11-08.md). Evaluasi kasus berlabel pakar masih tertunda.
+5. Sprint 4 menambahkan PostgreSQL opsional untuk mode verified dan persiapan CI/Render. Database tidak mengganti audit sumber atau evaluasi B-12.
 
 Instruksi sesi implementasi ada di [AGENTS.md](AGENTS.md).
 
@@ -26,3 +28,7 @@ Instruksi sesi implementasi ada di [AGENTS.md](AGENTS.md).
 Gunakan Python 3.12, buat `.venv`, instal dependensi terpin dari `requirements-dev.txt`, lalu jalankan `KNOWLEDGE_MODE=verified uvicorn app.main:app` dan buka `http://127.0.0.1:8000/`. Mode verified membaca `data/verified/knowledge_verified.json`; mode default `demo` membaca `data/demo/knowledge_demo.json`. Loader menolak mode yang tidak cocok dan tidak beralih otomatis ke demo. Jalankan `python -m pytest tests` dan `ruff check app tests`. Versi runtime terpasang dicatat dalam `requirements-lock.txt`. Hasil pemeriksaan aktual ada di [log kerja](docs/scrum/WORK_LOG.md).
 
 Untuk pemeriksaan browser di lingkungan yang mengizinkan localhost, instal dependency pengujian Node dari `package.json` dan sediakan Chromium Playwright. Jalankan server verified di atas lalu `npm run test:browser:verified`; skrip ini memeriksa label mode, batas metode, konsultasi, sumber, jejak, kondisi tanpa dukungan, dan lebar layar. Untuk mode demo, jalankan server tanpa `KNOWLEDGE_MODE` lalu `npm run test:browser`. Hasil aktual dan batas lingkungan dicatat di [log kerja](docs/scrum/WORK_LOG.md).
+
+## PostgreSQL dan deploy
+
+Default tetap JSON. Backend database hanya menerima mode verified dan versi eksplisit: `KNOWLEDGE_MODE=verified`, `KNOWLEDGE_BACKEND=postgres`, `KNOWLEDGE_VERSION=l04-2026-11-08-v1`, `DATABASE_URL` (URL aplikasi). Sebelum menyalakannya, jalankan migrasi `alembic upgrade head` dan impor `python -m app.db.seed` dengan `DATABASE_DIRECT_URL` pada database yang sama. Tidak ada fallback ke JSON bila data atau DB tidak tersedia. Instruksi Neon/Render dan batas privasi ada pada [panduan deploy](docs/architecture/POSTGRES_DEPLOYMENT.md).

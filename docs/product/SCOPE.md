@@ -8,6 +8,8 @@ MVP mencakup beranda, daftar gejala, formulir konsultasi, perhitungan CF, pering
 
 Di luar MVP: foto/CNN, chatbot, IoT, training ML, login, dashboard admin, database, dan riwayat permanen. Penyimpanan pengetahuan awal direncanakan sebagai JSON. Tidak ada klaim kelayakan penggunaan lapangan sebelum verifikasi pengetahuan dan evaluasi kasus berlabel pakar.
 
+**Pengembangan pasca-MVP (D-23/D-24):** mode verified dapat membaca snapshot berversi dari PostgreSQL dan mencatat input/hasil konsultasi anonim. Tidak ada endpoint riwayat publik atau fitur admin. Pengujian/operasi Neon dan Render terpisah dari MVP semula; daftar tugas ada pada Sprint 4. Masa simpan catatan konsultasi, kapasitas, dan penghapusan rutin perlu ditetapkan sebelum membuka layanan untuk penggunaan umum.
+
 ## Status dan batas data
 
 Target awal 3–5 hama serta 10–20 gejala hanyalah perkiraan scope. Snapshot L04 yang diperiksa manusia pada 2026-11-08 memuat lima hama, 10 gejala, dan 11 relasi positif. Status `verified` berarti sumber dan locator diperiksa menurut D-17; ini adaptasi CF positif dari L04, bukan validasi pakar. Penanganan tidak tersedia. Kasus berlabel pakar, evaluasi akurasi lapangan, dan bukti kelayakan penggunaan lapangan belum tersedia; lihat [register sumber](../knowledge/SOURCE_REGISTER.md).
