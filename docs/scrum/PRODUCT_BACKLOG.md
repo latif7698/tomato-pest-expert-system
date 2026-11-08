@@ -17,7 +17,7 @@ Status yang dipakai: **Backlog**, **Ready**, **In Progress**, **Review**, **Done
 | B-11 | Sebagai tim, saya mengaktifkan pengetahuan hama terverifikasi. | Tinggi | R-02, R-08, R-09, R-11 | Checklist per entri, loader verified, tanpa fallback demo. | B-02, B-03 | Sprint 3 | Done |
 | B-12 | Sebagai tim, saya mengukur ketepatan terhadap label pakar secara jujur. | Tinggi | R-13 | Jumlah kasus, label, kesalahan, batas kesimpulan dilaporkan; data independen. | B-11, kasus berlabel pakar | Sprint 3 | Blocked |
 | B-13 | Sebagai tim, saya menyelaraskan dokumentasi akhir dengan implementasi. | Sedang | R-01–R-13 | Kontrak, cara jalan, bukti uji, dan keterbatasan diperbarui. | B-10–B-12 | Sprint 3 | In Progress |
-| B-14 | Sebagai developer, saya mengimpor dan membaca pengetahuan verified berversi dari PostgreSQL. | Tinggi | D-23 | Migrasi, checksum, versi pin, gagal tertutup, serta hasil CF setara JSON diuji. | B-11 | Sprint 4 | Review |
+| B-14 | Sebagai developer, saya mengimpor dan membaca pengetahuan verified berversi dari PostgreSQL. | Tinggi | D-23 | Migrasi, checksum, versi pin, gagal tertutup, serta hasil CF setara JSON diuji. | B-11 | Sprint 4 | Done |
 | B-15 | Sebagai tim, saya men-deploy FastAPI ke Render dengan Neon dan pengujian CI. | Tinggi | D-24 | CI PostgreSQL/browser lulus; migrasi produksi aman; health check serta aplikasi publik diperiksa. | B-14, kredensial Neon/Render | Sprint 4 | In Progress |
 | B-16 | Sebagai operator, saya mengatur masa simpan dan pembersihan catatan konsultasi. | Sedang | D-23 | Kebijakan retensi, job penghapusan, dan bukti operasi dicatat sebelum layanan umum. | B-15 | Sprint 4 | Ready |
 
