@@ -1,3 +1,3 @@
 # Data terverifikasi
 
-Belum ada dataset terverifikasi. Isi hanya setelah PDF/sumber lain ditelaah per entri, locator dan asal bobot dicatat, serta [checklist](../../docs/knowledge/VERIFICATION_CHECKLIST.md) selesai. Jangan menyalin fixture sintetis ke sini. Bila data verified belum ada, aplikasi kelak harus gagal jelas saat mode verified diminta.
+Snapshot aktif [`knowledge_verified.json`](knowledge_verified.json), versi `l04-2026-11-08-v1`, memuat lima hama, 10 gejala, dan 11 aturan positif. Sumber, locator, dan angka yang dimodelkan diperiksa Asep Abdul Latip pada 2026-11-08; bukti dan versi kandidat ada di [penyelesaian audit](../../docs/knowledge/L04_HUMAN_AUDIT_RESOLUTION_2026-11-08.md). `verified` menurut D-17 berarti sumber diperiksa manusia, bukan validasi pakar atau pengukuran akurasi. Enam relasi negatif dan P11 tetap di data review. `handling` kosong. Loader hanya menerima snapshot ini dalam mode verified; tidak ada fallback ke demo.

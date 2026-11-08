@@ -29,9 +29,12 @@ def get_pest(knowledge: KnowledgeBase, pest_id: str) -> PestResponse | None:
     if pest is None:
         return None
     sources_by_id = {item.id: item for item in knowledge.sources}
+    source_ids = dict.fromkeys(
+        [*pest.source_ids, *(rule.source_id for rule in knowledge.rules if rule.pest_id == pest_id)]
+    )
     sources = [
         SourceItem(id=source.id, title=source.title, url=source.url)
-        for source_id in pest.source_ids
+        for source_id in source_ids
         for source in [sources_by_id[source_id]]
     ]
     return PestResponse(

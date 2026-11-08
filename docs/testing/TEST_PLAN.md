@@ -1,6 +1,6 @@
 # Rencana pengujian
 
-Pengujian unit bagian A, API bagian B, dan alur UI lewat DOM emulator telah dijalankan dengan fixture sintetis; hasil aktual tercatat di [log kerja](../scrum/WORK_LOG.md). Skrip browser `tests/browser_flow.cjs` tersedia, tetapi server localhost dan Chromium belum dapat dijalankan dalam sandbox; lebar layar serta navigasi keyboard nyata belum diuji. Bagian C menunggu data berlabel pakar. Catat perintah, lingkungan, tanggal, hasil, serta kegagalan; jangan menyatakan PASS hanya karena test dibuat.
+Pengujian unit bagian A, API bagian B, dan alur UI lewat DOM emulator telah dijalankan dengan fixture sintetis; hasil aktual tercatat di [log kerja](../scrum/WORK_LOG.md). Pengguna melaporkan `npm run test:browser` lulus di WSL, termasuk lebar layar dan keyboard, serta telah meninjau screenshot layar lebar dan sempit. Browser tetap tidak dapat diluncurkan dalam sandbox ini. Bagian C menunggu data berlabel pakar. Catat perintah, lingkungan, tanggal, hasil, serta kegagalan; jangan menyatakan PASS hanya karena test dibuat.
 
 ## A. Kebenaran perhitungan dan loader
 
@@ -23,4 +23,4 @@ Dengan HTTPX, periksa ketiga endpoint, JSON, 404, 422 tanpa traceback/path, `no_
 
 ## C. Evaluasi ketepatan domain
 
-Terblokir sampai ada pengetahuan terverifikasi dan kasus berlabel pakar. Catat jumlah kasus, asal dan label pembanding, prediksi, kesalahan per kasus, metrik yang dipilih beserta definisinya, serta batas kesimpulan (R-13). Pisahkan kasus evaluasi dari kasus yang dipakai memilih/menyetel bobot; jika pemisahan gagal, jangan laporkan sebagai uji independen. Kelulusan uji A/B tidak membuktikan ketepatan identifikasi lapangan.
+Dataset dengan sumber yang diperiksa manusia sudah tersedia menurut D-17; evaluasi domain tetap tertunda sampai ada kasus berlabel pakar. Catat jumlah kasus, asal dan label pembanding, prediksi, kesalahan per kasus, metrik yang dipilih beserta definisinya, serta batas kesimpulan (R-13). Pisahkan kasus evaluasi dari kasus yang dipakai memilih/menyetel bobot; jika pemisahan gagal, jangan laporkan sebagai uji independen. Kelulusan uji A/B tidak membuktikan ketepatan identifikasi lapangan.

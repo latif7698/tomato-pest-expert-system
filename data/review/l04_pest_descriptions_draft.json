@@ -1,0 +1,213 @@
+{
+  "_meta": {
+    "status": "DRAF_DESKRIPSI_DIKOREKSI_SETELAH_PEMERIKSAAN_MANUSIA",
+    "not_verified": true,
+    "not_for_application_use": true,
+    "loader_note": "Lima sumber deskripsi yang dipakai kandidat telah ditinjau manusia dan bernilai 'reviewed'; SRC-04 untuk P11 tetap 'belum_ditinjau'. Draf ini tetap bukan dataset aplikasi.",
+    "language": "deskripsi adalah parafrasa/terjemahan ringkas dari sumber, bukan kutipan",
+    "handling": "tidak diisi; penanganan tidak diminta dan tidak ada sumber hama L04",
+    "limits": [
+      "Sumber deskripsi umum tidak mengonfirmasi hubungan gejala-hama atau bobot L04.",
+      "Lima deskripsi kandidat ditinjau Asep Abdul Latip pada 2026-11-08; P11/SRC-04 tetap ditahan dan belum ditinjau untuk dataset.",
+      "Padanan nama umum Indonesia dan kesetaraan beberapa nama ilmiah L04 tetap menjadi batas interpretasi yang tercatat pada flags.",
+      "Halaman web dapat berubah; URL dan locator yang diperiksa dicatat pada audit manusia."
+    ],
+    "decisions": "D-15, D-19, D-20, D-21 pada docs/decisions/DECISION_LOG.md",
+    "human_review": {
+      "reviewer": "Asep Abdul Latip",
+      "date": "2026-11-08",
+      "audit": "docs/knowledge/L04_HUMAN_AUDIT_ORIGINAL_2026-11-08.md"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-02",
+      "title": "Root-Knot Nematode (Meloidogyne spp.) - Tomato Pest Management Guidelines, UC IPM (UC ANR Publication 3470)",
+      "authors": "A.T. Ploeg (Nematology, UC Riverside)",
+      "publisher": "University of California Statewide IPM Program",
+      "url": "https://ipm.ucanr.edu/agriculture/tomato/root-knot-nematodes/",
+      "doi": null,
+      "version_note": "teks diperbarui 05/25 menurut halaman",
+      "accessed": "2026-11-07",
+      "access_status": "reviewed"
+    },
+    {
+      "id": "SRC-03",
+      "title": "Vegetable Leafminer, Liriomyza sativae Blanchard (Insecta: Diptera: Agromyzidae), EENY255 (IN507)",
+      "authors": "John L. Capinera",
+      "publisher": "UF/IFAS Extension (EDIS)",
+      "url": "https://edis.ifas.ufl.edu/publication/IN507/pdf",
+      "doi": "10.32473/edis-in507-2001",
+      "version_note": "direvisi Oktober 2023 menurut dokumen",
+      "accessed": "2026-11-07",
+      "access_status": "reviewed"
+    },
+    {
+      "id": "SRC-04",
+      "title": "Studies on the damage potential of the predator Nesidiocoris tenuis on tomato plants, Bulletin of Insectology 62(1): 41-46",
+      "authors": "D. Perdikis, A. Fantinou, N. Garantonakis, P. Kitsis, D. Maselou, S. Panagakis",
+      "publisher": "Bulletin of Insectology (2009)",
+      "url": "https://archive.bulletinofinsectology.org/pdfarticles/vol62-2009-041-046perdikis.pdf",
+      "doi": null,
+      "version_note": "artikel jurnal 2009",
+      "accessed": "2026-11-07",
+      "access_status": "belum_ditinjau"
+    },
+    {
+      "id": "SRC-05",
+      "title": "Melon Fly, Bactrocera cucurbitae (Coquillett) (Insecta: Diptera: Tephritidae), EENY199 (IN356)",
+      "authors": "H.V. Weems Jr., J.B. Heppner, T.R. Fasulo",
+      "publisher": "UF/IFAS Extension (EDIS)",
+      "url": "https://edis.ifas.ufl.edu/publication/IN356/pdf",
+      "doi": null,
+      "version_note": "direvisi Oktober 2024 menurut dokumen",
+      "accessed": "2026-11-07",
+      "access_status": "reviewed"
+    },
+    {
+      "id": "SRC-06",
+      "title": "CPHST Pest Datasheet for Spodoptera litura",
+      "authors": "M. Sullivan (2007), direvisi staf USDA-APHIS-PPQ-CPHST",
+      "publisher": "USDA-APHIS-PPQ-CPHST",
+      "url": "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Spodoptera-litura_CPHST-Datasheet_2014.pdf",
+      "doi": null,
+      "version_note": "revisi April 2014, update Juli 2016 menurut dokumen",
+      "accessed": "2026-11-07",
+      "access_status": "reviewed"
+    },
+    {
+      "id": "SRC-07",
+      "title": "Black cutworm (297), Pacific Pests, Pathogens, Weeds and Pesticides fact sheet",
+      "authors": "Grahame Jackson (berdasarkan CABI 2013 dan Capinera 2012)",
+      "publisher": "Pacific Pests and Pathogens (PestNet, ACIAR)",
+      "url": "https://apps.lucidcentral.org/pppw_v13/pdf/web_full/black_cutworm_297.pdf",
+      "doi": null,
+      "version_note": "PDF resmi penerbit yang diperiksa 2026-11-08; URL halaman sebelumnya mengembalikan 403.",
+      "accessed": "2026-11-07",
+      "access_status": "reviewed"
+    }
+  ],
+  "pests": [
+    {
+      "id": "P9",
+      "name": "Nematoda Akar",
+      "description": "Nematoda puru akar (Meloidogyne spp.) adalah nematoda parasit yang hidup di dalam akar dan membentuk bengkakan (puru) pada akar tomat. Puru mengganggu aliran air dan hara sehingga tanaman kurang bugar, dapat menguning, dan mudah layu pada cuaca panas. Betina dewasa dapat tampak seperti butiran putih kecil di dalam puru yang dibelah.",
+      "source_ids": [
+        "SRC-02"
+      ],
+      "evidence": [
+        {
+          "source_id": "SRC-02",
+          "locator": "bagian 'Description of the Pest' dan 'Damage'",
+          "supports": "puru akar, pengaruh pada air/hara, menguning, layu cuaca panas, betina seperti mutiara putih kecil"
+        }
+      ],
+      "flags": [
+        "Nama L04 memuat 'Heterodera marioni/ Meloidogyne javanice'; sumber membahas Meloidogyne spp. Kesetaraan nama lama/ejaan belum diverifikasi.",
+        "Nematoda bukan serangga; masuk scope hama atas keputusan D-13."
+      ],
+      "handling": null,
+      "status": "masuk"
+    },
+    {
+      "id": "P10",
+      "name": "Penggerek Daun",
+      "description": "Leafminer sayuran (Liriomyza sativae; Diptera: Agromyzidae) adalah lalat kecil yang didominasi warna kuning dan hitam. Larvanya hidup di dalam daun, memakan jaringan di antara kedua permukaan daun, dan membentuk liang tidak beraturan yang melebar seiring pertumbuhan larva. Tomat termasuk tanaman inangnya.",
+      "source_ids": [
+        "SRC-03"
+      ],
+      "evidence": [
+        {
+          "source_id": "SRC-03",
+          "locator": "hal. 2 bagian 'Adult' dan 'Host Plants'; hal. 2-3 bagian 'Damage'",
+          "supports": "warna kuning-hitam, tomat sebagai inang, larva membuat liang dan memakan mesofil"
+        }
+      ],
+      "flags": [
+        "Sumber memakai istilah leafminer; padanan Indonesia 'penggerek/pengorok daun' belum diverifikasi terhadap sumber berbahasa Indonesia."
+      ],
+      "handling": null,
+      "status": "masuk"
+    },
+    {
+      "id": "P11",
+      "name": "Kepik Tomat",
+      "description": "Kepik Nesidiocoris tenuis (Hemiptera: Miridae) bersifat omnivora: memangsa serangga kecil seperti kutu kebul dan juga makan jaringan tanaman. Pada tomat, aktivitas makannya dikaitkan dengan cincin nekrotik pada batang, daun, atau tangkai bunga serta gugurnya bunga, tetapi tingkat kerusakan dilaporkan sangat beragam. Beberapa penelitian menilai potensi kerusakannya rendah dan serangga ini juga dipandang sebagai musuh alami; status sebagai hama pada tomat belum jelas menurut sumber.",
+      "source_ids": [
+        "SRC-04"
+      ],
+      "evidence": [
+        {
+          "source_id": "SRC-04",
+          "locator": "hal. 41 'Abstract'; hal. 41-42 'Introduction'; hal. 45 'Discussion'",
+          "supports": "omnivora/predator kutu kebul, cincin nekrotik dan gugur bunga, kerusakan beragam, status belum jelas"
+        }
+      ],
+      "flags": [
+        "Sumber menyimpulkan serangga ini dapat dipandang sebagai predator bermanfaat pada kepadatan yang diuji; label 'Hama' pada L04 perlu keputusan pengguna terhadap scope D-01.",
+        "Sumber adalah penelitian kandang di Yunani; tidak menguji kondisi Indonesia."
+      ],
+      "handling": null,
+      "status": "ditahan_di_review_d19"
+    },
+    {
+      "id": "P12",
+      "name": "Lalat Buah",
+      "description": "Lalat buah melon (Bactrocera cucurbitae, juga ditulis Zeugodacus cucurbitae; Diptera: Tephritidae) adalah lalat buah yang dianggap hama penting sayuran dalam wilayah sebarannya. Spesies ini tercatat tersebar di Indonesia. Betina umumnya bertelur di buah muda (dan kadang di batang sukulen); larvanya berupa belatung putih. Lebih dikenal sebagai hama labu-labuan; tomat tercatat sebagai salah satu dari lebih dari 125 inangnya, tetapi sumber mencatat sebagian catatan inang mungkin berasal dari pengamatan kebetulan.",
+      "source_ids": [
+        "SRC-05"
+      ],
+      "evidence": [
+        {
+          "source_id": "SRC-05",
+          "locator": "hal. 1 'Introduction' dan 'Synonyms'; hal. 1 'Distribution' (Indonesia); hal. 2–3 'Larva'; hal. 4 'Life History', 'Damage', 'Hosts'",
+          "supports": "hama penting, sinonim Zeugodacus, sebaran Indonesia, telur di buah muda, larva belatung putih, inang termasuk tomat dengan catatan keraguan"
+        }
+      ],
+      "flags": [
+        "Sumber menyebut spesies ini paling merusak pada melon dan tanaman terkait; tomat tercatat sebagai inang, tetapi sebagian catatan inang dapat berasal dari pengamatan imago pada tumbuhan bukan inang.",
+        "Nama L04 'Bactocera cucurbitae (Coquillet)' ditulis tidak baku; nama sumber 'Bactrocera cucurbitae (Coquillett)'."
+      ],
+      "handling": null,
+      "status": "masuk_dengan_catatan_d20"
+    },
+    {
+      "id": "P13",
+      "name": "Ulat Grayak",
+      "description": "Ulat grayak (Spodoptera litura; Lepidoptera: Noctuidae) adalah ngengat yang larvanya memakan banyak jenis tanaman. Pada tomat, larva merusak daun dan buah yang sedang berkembang. Larva muda biasanya berkelompok di sisi bawah daun dan menimbulkan bekas gerekan serta rangka daun; pada tahap lanjut daun dapat berlubang atau tersisa bagian yang gundul.",
+      "source_ids": [
+        "SRC-06"
+      ],
+      "evidence": [
+        {
+          "source_id": "SRC-06",
+          "locator": "hal. 1 (posisi taksonomi); hal. 2–3 'Biology and Ecology'; hal. 4 'Damage'; hal. 5 'On tomato'",
+          "supports": "Noctuidae, larva awal di sisi bawah daun, skeletonisasi dan lubang, kerusakan daun dan buah pada tomat"
+        }
+      ],
+      "flags": [
+        "Nama umum Indonesia 'ulat grayak' tidak dicantumkan di SRC-06; padanannya belum diverifikasi terhadap sumber berbahasa Indonesia."
+      ],
+      "handling": null,
+      "status": "masuk"
+    },
+    {
+      "id": "P14",
+      "name": "Ulat Tanah",
+      "description": "Ulat tanah hitam (Agrotis ipsilon) adalah ulat yang menyerang tanaman muda, termasuk tomat. Larva muda dapat melubangi daun, sedangkan larva yang lebih tua bersembunyi di tanah atau sisa tanaman dan makan pada malam hari. Pada tanah lembap larva memotong batang tepat di atas permukaan tanah; pada tanah kering larva dapat menggerek bagian tanaman di bawah tanah sehingga tanaman layu dan mati. Larva dewasa berwarna abu-abu hingga hitam dan menggulung saat terganggu.",
+      "source_ids": [
+        "SRC-07"
+      ],
+      "evidence": [
+        {
+          "source_id": "SRC-07",
+          "locator": "bagian 'Hosts', 'Symptoms & Life Cycle', dan 'Detection & Inspection'",
+          "supports": "tomat sebagai inang, larva memotong batang di atas tanah, makan malam hari, abu-abu sampai hitam, menggulung saat terganggu"
+        }
+      ],
+      "flags": [],
+      "handling": null,
+      "status": "masuk"
+    }
+  ]
+}

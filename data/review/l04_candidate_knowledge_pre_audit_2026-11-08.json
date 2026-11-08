@@ -1,0 +1,251 @@
+{
+  "_meta": {
+    "status": "candidate_unverified",
+    "not_for_application_use": true,
+    "source_extraction": "l04_extraction.json",
+    "source_descriptions": "l04_pest_descriptions_draft.json"
+  },
+  "domain": "tomato_pests",
+  "pests": [
+    {
+      "id": "P9",
+      "name": "Nematoda Akar",
+      "description": "Nematoda puru akar (Meloidogyne spp.) adalah nematoda parasit yang hidup di dalam akar dan membentuk bengkakan (puru) pada akar tomat. Puru mengganggu aliran air dan hara sehingga tanaman kurang bugar, dapat menguning, dan mudah layu pada cuaca panas. Betina dewasa dapat tampak seperti butiran putih kecil di dalam puru yang dibelah.",
+      "source_ids": [
+        "SRC-02"
+      ]
+    },
+    {
+      "id": "P10",
+      "name": "Penggerek Daun",
+      "description": "Leafminer sayuran (Liriomyza sativae; Diptera: Agromyzidae) adalah lalat kecil yang didominasi warna kuning dan hitam. Larvanya hidup di dalam daun, memakan jaringan di antara kedua permukaan daun, dan membentuk liang tidak beraturan yang melebar seiring pertumbuhan larva. Tomat termasuk tanaman inangnya.",
+      "source_ids": [
+        "SRC-03"
+      ]
+    },
+    {
+      "id": "P12",
+      "name": "Lalat Buah",
+      "description": "Lalat buah melon (Bactrocera cucurbitae, juga ditulis Zeugodacus cucurbitae; Diptera: Tephritidae) adalah lalat buah yang di wilayah sebarannya, termasuk Indonesia, dianggap hama penting sayuran. Betina umumnya bertelur di buah muda (dan kadang di batang sukulen); larvanya berupa belatung putih. Lebih dikenal sebagai hama labu-labuan; tomat tercatat sebagai salah satu dari lebih dari 125 inangnya, tetapi sumber mencatat sebagian catatan inang mungkin berasal dari pengamatan kebetulan.",
+      "source_ids": [
+        "SRC-05"
+      ]
+    },
+    {
+      "id": "P13",
+      "name": "Ulat Grayak",
+      "description": "Ulat grayak (Spodoptera litura; Lepidoptera: Noctuidae) adalah ngengat yang larvanya memakan banyak jenis tanaman. Pada tomat, larva merusak daun dan buah yang sedang berkembang. Larva muda biasanya berkelompok di sisi bawah daun dan menimbulkan bekas gerekan serta rangka daun; pada tahap lanjut daun dapat berlubang atau tersisa bagian yang gundul.",
+      "source_ids": [
+        "SRC-06"
+      ]
+    },
+    {
+      "id": "P14",
+      "name": "Ulat Tanah",
+      "description": "Ulat tanah hitam (Agrotis ipsilon) adalah ulat yang menyerang tanaman muda, termasuk tomat. Larva muda dapat melubangi daun, sedangkan larva yang lebih tua bersembunyi di tanah atau sisa tanaman pada siang hari dan makan pada malam hari. Pada tanah lembap larva memotong batang tepat di atas permukaan tanah; pada tanah kering larva dapat menggerek bagian tanaman di bawah tanah sehingga tanaman layu dan mati. Larva dewasa berwarna abu-abu hingga hitam dan menggulung saat terganggu.",
+      "source_ids": [
+        "SRC-07"
+      ]
+    }
+  ],
+  "symptoms": [
+    {
+      "id": "G23",
+      "label": "Tanaman kerdil",
+      "source_ids": [
+        "SRC-01"
+      ]
+    },
+    {
+      "id": "G24",
+      "label": "Akar serabut tidak normal dan terdapat bulatan kecil seperti bisul berwarna putih",
+      "source_ids": [
+        "SRC-01"
+      ]
+    },
+    {
+      "id": "G25",
+      "label": "Daun tanaman terdapat bercak putih",
+      "source_ids": [
+        "SRC-01"
+      ]
+    },
+    {
+      "id": "G26",
+      "label": "Terdapat larva dibagian tepi daun",
+      "source_ids": [
+        "SRC-01"
+      ]
+    },
+    {
+      "id": "G30",
+      "label": "Buah busuk dan terdapat larva",
+      "source_ids": [
+        "SRC-01"
+      ]
+    },
+    {
+      "id": "G31",
+      "label": "Buah berlubang",
+      "source_ids": [
+        "SRC-01"
+      ]
+    },
+    {
+      "id": "G32",
+      "label": "Buah rontok",
+      "source_ids": [
+        "SRC-01"
+      ]
+    },
+    {
+      "id": "G34",
+      "label": "Daun berlubang",
+      "source_ids": [
+        "SRC-01"
+      ]
+    },
+    {
+      "id": "G36",
+      "label": "Pangkal batang terdapat bekas gigitan",
+      "source_ids": [
+        "SRC-01"
+      ]
+    },
+    {
+      "id": "G37",
+      "label": "Terdapat ulat menggulung disekitar tanaman",
+      "source_ids": [
+        "SRC-01"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "pest_id": "P9",
+      "symptom_id": "G23",
+      "cf_expert": 0.8,
+      "source_id": "SRC-01",
+      "source_locator": "hal. cetak 454, Tabel IV (Data Diagnosa), kelompok baris P9, kode gejala G23; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+      "validation_status": "candidate"
+    },
+    {
+      "pest_id": "P9",
+      "symptom_id": "G24",
+      "cf_expert": 0.8,
+      "source_id": "SRC-01",
+      "source_locator": "hal. cetak 454, Tabel IV (Data Diagnosa), kelompok baris P9, kode gejala G24; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+      "validation_status": "candidate"
+    },
+    {
+      "pest_id": "P10",
+      "symptom_id": "G25",
+      "cf_expert": 0.8,
+      "source_id": "SRC-01",
+      "source_locator": "hal. cetak 454, Tabel IV (Data Diagnosa), kelompok baris P10, kode gejala G25; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+      "validation_status": "candidate"
+    },
+    {
+      "pest_id": "P10",
+      "symptom_id": "G26",
+      "cf_expert": 0.4,
+      "source_id": "SRC-01",
+      "source_locator": "hal. cetak 454, Tabel IV (Data Diagnosa), kelompok baris P10, kode gejala G26; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+      "validation_status": "candidate"
+    },
+    {
+      "pest_id": "P12",
+      "symptom_id": "G30",
+      "cf_expert": 0.8,
+      "source_id": "SRC-01",
+      "source_locator": "hal. cetak 455, Tabel IV (Data Diagnosa), kelompok baris P12, kode gejala G30; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+      "validation_status": "candidate"
+    },
+    {
+      "pest_id": "P12",
+      "symptom_id": "G31",
+      "cf_expert": 0.4,
+      "source_id": "SRC-01",
+      "source_locator": "hal. cetak 455, Tabel IV (Data Diagnosa), kelompok baris P12, kode gejala G31; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+      "validation_status": "candidate"
+    },
+    {
+      "pest_id": "P12",
+      "symptom_id": "G32",
+      "cf_expert": 0.6,
+      "source_id": "SRC-01",
+      "source_locator": "hal. cetak 455, Tabel IV (Data Diagnosa), kelompok baris P12, kode gejala G32; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+      "validation_status": "candidate"
+    },
+    {
+      "pest_id": "P13",
+      "symptom_id": "G31",
+      "cf_expert": 0.4,
+      "source_id": "SRC-01",
+      "source_locator": "hal. cetak 455, Tabel IV (Data Diagnosa), kelompok baris P13, kode gejala G31; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+      "validation_status": "candidate"
+    },
+    {
+      "pest_id": "P13",
+      "symptom_id": "G34",
+      "cf_expert": 0.4,
+      "source_id": "SRC-01",
+      "source_locator": "hal. cetak 455, Tabel IV (Data Diagnosa), kelompok baris P13, kode gejala G34; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+      "validation_status": "candidate"
+    },
+    {
+      "pest_id": "P14",
+      "symptom_id": "G36",
+      "cf_expert": 0.8,
+      "source_id": "SRC-01",
+      "source_locator": "hal. cetak 455, Tabel IV (Data Diagnosa), kelompok baris P14, kode gejala G36; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+      "validation_status": "candidate"
+    },
+    {
+      "pest_id": "P14",
+      "symptom_id": "G37",
+      "cf_expert": 0.8,
+      "source_id": "SRC-01",
+      "source_locator": "hal. cetak 455, Tabel IV (Data Diagnosa), kelompok baris P14, kode gejala G37; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+      "validation_status": "candidate"
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Penerapan Metode Certainty Factor pada Sistem Pakar Diagnosa Hama dan Penyakit pada Tanaman Tomat",
+      "url": "https://jurnal.untan.ac.id/index.php/jepin/article/view/56178",
+      "access_status": "belum_diverifikasi"
+    },
+    {
+      "id": "SRC-02",
+      "title": "Root-Knot Nematode (Meloidogyne spp.) - Tomato Pest Management Guidelines, UC IPM (UC ANR Publication 3470)",
+      "url": "https://ipm.ucanr.edu/agriculture/tomato/root-knot-nematodes/",
+      "access_status": "belum_ditinjau"
+    },
+    {
+      "id": "SRC-03",
+      "title": "Vegetable Leafminer, Liriomyza sativae Blanchard (Insecta: Diptera: Agromyzidae), EENY255 (IN507)",
+      "url": "https://edis.ifas.ufl.edu/publication/IN507/pdf",
+      "access_status": "belum_ditinjau"
+    },
+    {
+      "id": "SRC-05",
+      "title": "Melon Fly, Bactrocera cucurbitae (Coquillett) (Insecta: Diptera: Tephritidae), EENY199 (IN356)",
+      "url": "https://edis.ifas.ufl.edu/publication/IN356/pdf",
+      "access_status": "belum_ditinjau"
+    },
+    {
+      "id": "SRC-06",
+      "title": "CPHST Pest Datasheet for Spodoptera litura",
+      "url": "https://caps.ceris.purdue.edu/wp-content/uploads/2025/07/Spodoptera-litura_CPHST-Datasheet_2014.pdf",
+      "access_status": "belum_ditinjau"
+    },
+    {
+      "id": "SRC-07",
+      "title": "Black cutworm (297), Pacific Pests, Pathogens, Weeds and Pesticides fact sheet",
+      "url": "https://apps.lucidcentral.org/ppp/text/web_full/entities/black_cutworm_297.htm",
+      "access_status": "belum_ditinjau"
+    }
+  ]
+}

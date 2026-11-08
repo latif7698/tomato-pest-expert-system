@@ -39,4 +39,4 @@ Contoh struktur **sintetis**, bukan data hama tomat nyata:
 }
 ```
 
-Contoh ini hanya mendefinisikan bentuk. File `knowledge.json` nyata belum dibuat.
+Contoh ini hanya mendefinisikan bentuk. Snapshot nyata yang sumbernya diperiksa manusia pada 2026-11-08 ada di [`data/verified/knowledge_verified.json`](../../data/verified/knowledge_verified.json). Definisi `verified` mengikuti D-17 dan [audit manusia](L04_HUMAN_AUDIT_RESOLUTION_2026-11-08.md), tanpa klaim validasi pakar atau akurasi lapangan. Kasus berlabel pakar tetap tertunda.

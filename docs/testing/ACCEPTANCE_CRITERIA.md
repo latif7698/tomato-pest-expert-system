@@ -1,6 +1,6 @@
 # Kriteria penerimaan
 
-Dokumen ini merinci bukti penerimaan untuk [requirements](../product/REQUIREMENTS.md). Pemeriksaan unit, API, dan alur UI di DOM emulator sudah dijalankan; bukti dan batasnya ada di [log kerja](../scrum/WORK_LOG.md). Browser sungguhan, lint Ruff, dan evaluasi domain belum diuji.
+Dokumen ini merinci bukti penerimaan untuk [requirements](../product/REQUIREMENTS.md). Uji Python, API, dan alur browser verified dijalankan pada 2026-11-08; bukti ada di [log kerja](../scrum/WORK_LOG.md). Ruff pada seluruh `app tests` berjalan dan menemukan enam temuan lama; berkas Python Tahap 2 lolos lint. Evaluasi domain berlabel pakar belum tersedia.
 
 | Requirement | Pemeriksaan penerimaan | Bukti |
 | --- | --- | --- |

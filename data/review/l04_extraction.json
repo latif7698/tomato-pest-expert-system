@@ -1,0 +1,1205 @@
+{
+  "_meta": {
+    "status": "DRAFT_TRANSKRIPSI_UNTUK_REVIEW",
+    "not_for_application_use": true,
+    "not_verified": true,
+    "scope": "hanya hama tomat (P9-P14); penyakit P1-P8 tidak ditranskripsi",
+    "page_convention": "printed_page = nomor cetak (451-458); pdf_page = printed_page - 450 (interpretasi dari urutan halaman)",
+    "reading_method": "lapisan teks PDF; kolom MB/MD dibaca per kolom (urutan baris sama dengan kode gejala). Satu-satunya pemeriksaan silang numerik: contoh R1 (penyakit) hal. 455-456.",
+    "separation": "field *_transcribed / printed = kutipan sumber; field *_calc = hasil hitung; field *_suggested / notes = interpretasi",
+    "decision_note": "keputusan 2026-11-07 tercatat di docs/decisions/DECISION_LOG.md D-11..D-16; berkas ini tetap draf review",
+    "human_check": "Asep Abdul Latip, 2026-11-08: 11 relasi yang dimodelkan dan label Tabel II cocok; 6 relasi negatif dan 2 relasi P11 tetap di review."
+  },
+  "source": {
+    "id": "L04",
+    "title": "Penerapan Metode Certainty Factor pada Sistem Pakar Diagnosa Hama dan Penyakit pada Tanaman Tomat",
+    "authors": [
+      "Dila Adellia",
+      "Alda Cendekia Siregar",
+      "Syarifah Putri Alkadri"
+    ],
+    "journal": "JEPIN (Jurnal Edukasi dan Penelitian Informatika)",
+    "volume": 8,
+    "issue": 3,
+    "month_year": "Desember 2022",
+    "issn": {
+      "electronic": "2548-9364",
+      "print": "2460-0741"
+    },
+    "dates": {
+      "submitted": "2022-07-13",
+      "revised": "2022-08-29",
+      "accepted": "2022-12-10"
+    },
+    "printed_pages": "451-458",
+    "pdf_pages": "1-8",
+    "doi": "10.26418/jp.v8i3.56178",
+    "doi_note": "dari docs/knowledge/SOURCE_REGISTER.md SRC-01 (halaman jurnal, diakses 2026-11-05); TIDAK tercetak pada PDF 8 halaman dan tidak diverifikasi dari PDF",
+    "article_url": "https://jurnal.untan.ac.id/index.php/jepin/article/view/56178 (dari pengguna)",
+    "pdf_url": "https://jurnal.untan.ac.id/index.php/jepin/article/viewFile/56178/75676595632",
+    "pdf_url_note": "URL PDF resmi dicatat dari pemeriksaan manusia 2026-11-08; lihat docs/knowledge/L04_HUMAN_AUDIT_ORIGINAL_2026-11-08.md.",
+    "expert": "Dr.Ir. Fadjar Rianto, MS (hal. cetak 453 dan 457)"
+  },
+  "pests": [
+    {
+      "code": "P9",
+      "name_printed": "Nematoda Akar (Heterodera marioni/ Meloidogyne javanice)",
+      "name_common_suggested": "Nematoda Akar",
+      "name_scientific_suggested": "Meloidogyne javanica (tercetak 'javanice'); 'Heterodera marioni' nama lama",
+      "scientific_suggestion_basis": "interpretasi (koreksi ejaan taksonomi) - perlu verifikasi",
+      "label_in_article": "Hama (Tabel VI, R9)",
+      "classification_note": "Tabel I tidak memisahkan hama/penyakit; klasifikasi hama diambil dari label 'Hama' pada Tabel VI",
+      "rule_code": "R9",
+      "description": null,
+      "handling": null,
+      "handling_note": "tidak tersedia: Tabel V hanya memuat solusi P1",
+      "source": {
+        "printed_page": 453,
+        "pdf_page": 3,
+        "table": "Tabel I (Data Hama dan Penyakit)",
+        "locator": "baris P9",
+        "rule_locator": "Tabel VI R9, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "scope_decision": "tetap masuk scope hama (D-13); hanya G23 dan G24 dimodelkan"
+    },
+    {
+      "code": "P10",
+      "name_printed": "Penggerek Daun (Liriomyza sative Blancard (Diptera : Asgromyzidae))",
+      "name_common_suggested": "Penggerek Daun",
+      "name_scientific_suggested": "Liriomyza sativae Blanchard (Diptera: Agromyzidae)",
+      "scientific_suggestion_basis": "interpretasi (koreksi ejaan taksonomi) - perlu verifikasi",
+      "label_in_article": "Hama (Tabel VI, R10)",
+      "classification_note": "Tabel I tidak memisahkan hama/penyakit; klasifikasi hama diambil dari label 'Hama' pada Tabel VI",
+      "rule_code": "R10",
+      "description": null,
+      "handling": null,
+      "handling_note": "tidak tersedia: Tabel V hanya memuat solusi P1",
+      "source": {
+        "printed_page": 453,
+        "pdf_page": 3,
+        "table": "Tabel I (Data Hama dan Penyakit)",
+        "locator": "baris P10",
+        "rule_locator": "Tabel VI R10, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi"
+    },
+    {
+      "code": "P11",
+      "name_printed": "Kepik Tomat (Nesidiocoris (Crytopeltis) tenuis (Hemiptera : Miridae))",
+      "name_common_suggested": "Kepik Tomat",
+      "name_scientific_suggested": "Nesidiocoris tenuis (sinonim Cyrtopeltis tenuis) (Hemiptera: Miridae)",
+      "scientific_suggestion_basis": "interpretasi (koreksi ejaan taksonomi) - perlu verifikasi",
+      "label_in_article": "Hama (Tabel VI, R11)",
+      "classification_note": "Tabel I tidak memisahkan hama/penyakit; klasifikasi hama diambil dari label 'Hama' pada Tabel VI",
+      "rule_code": "R11",
+      "description": null,
+      "handling": null,
+      "handling_note": "tidak tersedia: Tabel V hanya memuat solusi P1",
+      "source": {
+        "printed_page": 453,
+        "pdf_page": 3,
+        "table": "Tabel I (Data Hama dan Penyakit)",
+        "locator": "baris P11",
+        "rule_locator": "Tabel VI R11, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "scope_decision": "ditahan di review (D-19); tidak masuk dataset MVP"
+    },
+    {
+      "code": "P12",
+      "name_printed": "Lalat Buah (Bactocera cucurbitae (Coquillet) (Diptera : Tephritidae))",
+      "name_common_suggested": "Lalat Buah",
+      "name_scientific_suggested": "Bactrocera cucurbitae (Coquillett) (Diptera: Tephritidae)",
+      "scientific_suggestion_basis": "interpretasi (koreksi ejaan taksonomi) - perlu verifikasi",
+      "label_in_article": "Hama (Tabel VI, R12)",
+      "classification_note": "Tabel I tidak memisahkan hama/penyakit; klasifikasi hama diambil dari label 'Hama' pada Tabel VI",
+      "rule_code": "R12",
+      "description": null,
+      "handling": null,
+      "handling_note": "tidak tersedia: Tabel V hanya memuat solusi P1",
+      "source": {
+        "printed_page": 453,
+        "pdf_page": 3,
+        "table": "Tabel I (Data Hama dan Penyakit)",
+        "locator": "baris P12",
+        "rule_locator": "Tabel VI R12, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "scope_decision": "tetap masuk scope hama dengan catatan di deskripsi (D-20)"
+    },
+    {
+      "code": "P13",
+      "name_printed": "Ulat Grayak (Spodoptera liture F.)",
+      "name_common_suggested": "Ulat Grayak",
+      "name_scientific_suggested": "Spodoptera litura (F.)",
+      "scientific_suggestion_basis": "interpretasi (koreksi ejaan taksonomi) - perlu verifikasi",
+      "label_in_article": "Hama (Tabel VI, R13)",
+      "classification_note": "Tabel I tidak memisahkan hama/penyakit; klasifikasi hama diambil dari label 'Hama' pada Tabel VI",
+      "rule_code": "R13",
+      "description": null,
+      "handling": null,
+      "handling_note": "tidak tersedia: Tabel V hanya memuat solusi P1",
+      "source": {
+        "printed_page": 453,
+        "pdf_page": 3,
+        "table": "Tabel I (Data Hama dan Penyakit)",
+        "locator": "baris P13",
+        "rule_locator": "Tabel VI R13, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi"
+    },
+    {
+      "code": "P14",
+      "name_printed": "Ulat Tanah (Agrotis ipsilon)",
+      "name_common_suggested": "Ulat Tanah",
+      "name_scientific_suggested": "Agrotis ipsilon (tidak perlu diubah)",
+      "scientific_suggestion_basis": "interpretasi (koreksi ejaan taksonomi) - perlu verifikasi",
+      "label_in_article": "Hama (Tabel VI, R14)",
+      "classification_note": "Tabel I tidak memisahkan hama/penyakit; klasifikasi hama diambil dari label 'Hama' pada Tabel VI",
+      "rule_code": "R14",
+      "description": null,
+      "handling": null,
+      "handling_note": "tidak tersedia: Tabel V hanya memuat solusi P1",
+      "source": {
+        "printed_page": 453,
+        "pdf_page": 3,
+        "table": "Tabel I (Data Hama dan Penyakit)",
+        "locator": "baris P14",
+        "rule_locator": "Tabel VI R14, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi"
+    }
+  ],
+  "symptoms": [
+    {
+      "code": "G7",
+      "text_printed_table_ii": "Tanaman roboh",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "tanaman roboh",
+      "wording_comparison": "identik",
+      "text_ui_suggested": "Tanaman roboh",
+      "pests": [
+        "P9"
+      ],
+      "also_used_by_diseases_in_table_iv": [
+        "P3"
+      ],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G7"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": false
+    },
+    {
+      "code": "G12",
+      "text_printed_table_ii": "Tanaman layu",
+      "text_printed_has_trailing_space": true,
+      "text_printed_table_vi": "tanaman layu",
+      "wording_comparison": "identik (Tabel II ada spasi akhir)",
+      "text_ui_suggested": "Tanaman layu",
+      "pests": [
+        "P9"
+      ],
+      "also_used_by_diseases_in_table_iv": [
+        "P5",
+        "P7"
+      ],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G12"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": false
+    },
+    {
+      "code": "G17",
+      "text_printed_table_ii": "Daun mengering",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "daun mengering",
+      "wording_comparison": "identik",
+      "text_ui_suggested": "Daun mengering",
+      "pests": [
+        "P10"
+      ],
+      "also_used_by_diseases_in_table_iv": [
+        "P6"
+      ],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G17"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": false
+    },
+    {
+      "code": "G23",
+      "text_printed_table_ii": "Tanaman kerdil",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "tanaman kerdil",
+      "wording_comparison": "identik",
+      "text_ui_suggested": "Tanaman kerdil",
+      "pests": [
+        "P9"
+      ],
+      "also_used_by_diseases_in_table_iv": [
+        "P8"
+      ],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G23"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": true
+    },
+    {
+      "code": "G24",
+      "text_printed_table_ii": "Akar serabut tidak normal dan terdapat bulatan kecil seperti bisul berwarna putih",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "akar serabut tidak normal dan terdapat bulatan kecil seperti bisul berwarna putih",
+      "wording_comparison": "identik",
+      "text_ui_suggested": "Akar serabut tidak normal dan terdapat bulatan kecil seperti bisul berwarna putih",
+      "pests": [
+        "P9"
+      ],
+      "also_used_by_diseases_in_table_iv": [],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G24"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": true
+    },
+    {
+      "code": "G25",
+      "text_printed_table_ii": "Daun tanaman terdapat bercak putih",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "daun tanaman lebih kecil dan terdapat bercak putih",
+      "wording_comparison": "BERBEDA: R10 menambah 'lebih kecil' yang tidak ada di G25 (dua gejala jadi satu?)",
+      "text_ui_suggested": "Daun tanaman terdapat bercak putih  [D-14: teks Tabel II]",
+      "pests": [
+        "P10"
+      ],
+      "also_used_by_diseases_in_table_iv": [],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G25"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": true
+    },
+    {
+      "code": "G26",
+      "text_printed_table_ii": "Terdapat larva dibagian tepi daun",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "terdapat larva dibagian tepi daun",
+      "wording_comparison": "identik (ejaan 'dibagian' tercetak)",
+      "text_ui_suggested": "Terdapat larva di bagian tepi daun",
+      "pests": [
+        "P10"
+      ],
+      "also_used_by_diseases_in_table_iv": [],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G26"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": true
+    },
+    {
+      "code": "G27",
+      "text_printed_table_ii": "Ujung ranting terdapat tusukan berwarna coklat",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "ujung ranting terdapat tusukan melingkar berwarna coklat",
+      "wording_comparison": "BERBEDA: R11 menambah 'melingkar'",
+      "text_ui_suggested": "Ujung ranting terdapat tusukan berwarna coklat  [D-14: teks Tabel II]",
+      "pests": [
+        "P11"
+      ],
+      "also_used_by_diseases_in_table_iv": [],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G27"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": false
+    },
+    {
+      "code": "G28",
+      "text_printed_table_ii": "Pucuk tanaman kering",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "pucuk tanaman kering",
+      "wording_comparison": "identik",
+      "text_ui_suggested": "Pucuk tanaman kering",
+      "pests": [
+        "P11"
+      ],
+      "also_used_by_diseases_in_table_iv": [],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G28"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": false
+    },
+    {
+      "code": "G29",
+      "text_printed_table_ii": "Bunga layu dan menghitam",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "bunga layu dan menghitam",
+      "wording_comparison": "identik",
+      "text_ui_suggested": "Bunga layu dan menghitam",
+      "pests": [
+        "P11"
+      ],
+      "also_used_by_diseases_in_table_iv": [],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G29"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": false
+    },
+    {
+      "code": "G30",
+      "text_printed_table_ii": "Buah busuk dan terdapat larva",
+      "text_printed_has_trailing_space": true,
+      "text_printed_table_vi": "buah membusuk dan terdapat larva",
+      "wording_comparison": "beda kecil: 'busuk' vs 'membusuk'",
+      "text_ui_suggested": "Buah busuk dan terdapat larva",
+      "pests": [
+        "P12"
+      ],
+      "also_used_by_diseases_in_table_iv": [],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G30"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": true
+    },
+    {
+      "code": "G31",
+      "text_printed_table_ii": "Buah berlubang",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "buah berlubang",
+      "wording_comparison": "identik",
+      "text_ui_suggested": "Buah berlubang",
+      "pests": [
+        "P12",
+        "P13"
+      ],
+      "also_used_by_diseases_in_table_iv": [],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G31"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": true
+    },
+    {
+      "code": "G32",
+      "text_printed_table_ii": "Buah rontok",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "buah rontok",
+      "wording_comparison": "identik",
+      "text_ui_suggested": "Buah rontok",
+      "pests": [
+        "P12"
+      ],
+      "also_used_by_diseases_in_table_iv": [],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G32"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": true
+    },
+    {
+      "code": "G33",
+      "text_printed_table_ii": "Terdapat bercak putih pada daun",
+      "text_printed_has_trailing_space": true,
+      "text_printed_table_vi": "terdapat bercak putih pada daun",
+      "wording_comparison": "identik; nyaris duplikat G25",
+      "text_ui_suggested": "Terdapat bercak putih pada daun",
+      "pests": [
+        "P13"
+      ],
+      "also_used_by_diseases_in_table_iv": [],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G33"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": false
+    },
+    {
+      "code": "G34",
+      "text_printed_table_ii": "Daun berlubang",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "daun berlubang",
+      "wording_comparison": "identik",
+      "text_ui_suggested": "Daun berlubang",
+      "pests": [
+        "P13"
+      ],
+      "also_used_by_diseases_in_table_iv": [],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G34"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": true
+    },
+    {
+      "code": "G35",
+      "text_printed_table_ii": "Terdapat bekas gigitan dipermukaan daun",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "terdapat bekas gigitan dipermukaan daun",
+      "wording_comparison": "identik (ejaan 'dipermukaan')",
+      "text_ui_suggested": "Terdapat bekas gigitan di permukaan daun",
+      "pests": [
+        "P14"
+      ],
+      "also_used_by_diseases_in_table_iv": [],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G35"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": false
+    },
+    {
+      "code": "G36",
+      "text_printed_table_ii": "Pangkal batang terdapat bekas gigitan",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "pangkal batang terdapat bekas gigitan",
+      "wording_comparison": "identik",
+      "text_ui_suggested": "Pangkal batang terdapat bekas gigitan",
+      "pests": [
+        "P14"
+      ],
+      "also_used_by_diseases_in_table_iv": [],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G36"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": true
+    },
+    {
+      "code": "G37",
+      "text_printed_table_ii": "Terdapat ulat menggulung disekitar tanaman",
+      "text_printed_has_trailing_space": false,
+      "text_printed_table_vi": "terdapat ulat menggulung disekitar tanaman",
+      "wording_comparison": "identik (ejaan 'disekitar')",
+      "text_ui_suggested": "Terdapat ulat menggulung di sekitar tanaman",
+      "pests": [
+        "P14"
+      ],
+      "also_used_by_diseases_in_table_iv": [],
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel II (Data Gejala)",
+        "locator": "baris G37"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "used_in_mvp_option_b": true
+    }
+  ],
+  "relations": [
+    {
+      "id": "L04-REL-01",
+      "pest_code": "P9",
+      "symptom_code": "G7",
+      "rule_code": "R9",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 4,
+      "mb_transcribed": 0.4,
+      "md_transcribed": 0.6,
+      "cf_expert_calc_mb_minus_md": -0.2,
+      "negative": true,
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P9, kode gejala G7; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R9, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "nilai MB-MD negatif; semantik penggabungan tidak didefinisikan artikel",
+      "mvp_option_b_disposition": "tidak_dimodelkan_cf_negatif"
+    },
+    {
+      "id": "L04-REL-02",
+      "pest_code": "P9",
+      "symptom_code": "G12",
+      "rule_code": "R9",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 3,
+      "mb_transcribed": 0.4,
+      "md_transcribed": 0.8,
+      "cf_expert_calc_mb_minus_md": -0.4,
+      "negative": true,
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P9, kode gejala G12; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R9, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "nilai MB-MD negatif; semantik penggabungan tidak didefinisikan artikel",
+      "mvp_option_b_disposition": "tidak_dimodelkan_cf_negatif"
+    },
+    {
+      "id": "L04-REL-03",
+      "pest_code": "P9",
+      "symptom_code": "G23",
+      "rule_code": "R9",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 1,
+      "mb_transcribed": 1,
+      "md_transcribed": 0.2,
+      "cf_expert_calc_mb_minus_md": 0.8,
+      "negative": false,
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P9, kode gejala G23; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R9, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "",
+      "mvp_option_b_disposition": "dimodelkan"
+    },
+    {
+      "id": "L04-REL-04",
+      "pest_code": "P9",
+      "symptom_code": "G24",
+      "rule_code": "R9",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 2,
+      "mb_transcribed": 1,
+      "md_transcribed": 0.2,
+      "cf_expert_calc_mb_minus_md": 0.8,
+      "negative": false,
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P9, kode gejala G24; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R9, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "",
+      "mvp_option_b_disposition": "dimodelkan"
+    },
+    {
+      "id": "L04-REL-05",
+      "pest_code": "P10",
+      "symptom_code": "G17",
+      "rule_code": "R10",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 2,
+      "mb_transcribed": 0.4,
+      "md_transcribed": 0.8,
+      "cf_expert_calc_mb_minus_md": -0.4,
+      "negative": true,
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P10, kode gejala G17; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R10, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "nilai MB-MD negatif; semantik penggabungan tidak didefinisikan artikel",
+      "mvp_option_b_disposition": "tidak_dimodelkan_cf_negatif"
+    },
+    {
+      "id": "L04-REL-06",
+      "pest_code": "P10",
+      "symptom_code": "G25",
+      "rule_code": "R10",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 1,
+      "mb_transcribed": 1,
+      "md_transcribed": 0.2,
+      "cf_expert_calc_mb_minus_md": 0.8,
+      "negative": false,
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P10, kode gejala G25; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R10, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "",
+      "mvp_option_b_disposition": "dimodelkan"
+    },
+    {
+      "id": "L04-REL-07",
+      "pest_code": "P10",
+      "symptom_code": "G26",
+      "rule_code": "R10",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 3,
+      "mb_transcribed": 0.6,
+      "md_transcribed": 0.2,
+      "cf_expert_calc_mb_minus_md": 0.4,
+      "negative": false,
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P10, kode gejala G26; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R10, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "",
+      "mvp_option_b_disposition": "dimodelkan"
+    },
+    {
+      "id": "L04-REL-08",
+      "pest_code": "P11",
+      "symptom_code": "G27",
+      "rule_code": "R11",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 1,
+      "mb_transcribed": 1,
+      "md_transcribed": 0.2,
+      "cf_expert_calc_mb_minus_md": 0.8,
+      "negative": false,
+      "source": {
+        "printed_page": 454,
+        "pdf_page": 4,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P11, kode gejala G27; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R11, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "",
+      "mvp_option_b_disposition": "ditahan_di_review_p11_d19"
+    },
+    {
+      "id": "L04-REL-09",
+      "pest_code": "P11",
+      "symptom_code": "G28",
+      "rule_code": "R11",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 2,
+      "mb_transcribed": 0.6,
+      "md_transcribed": 0.4,
+      "cf_expert_calc_mb_minus_md": 0.2,
+      "negative": false,
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P11, kode gejala G28; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R11, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "; data tabel terpecah antar halaman 454/455",
+      "mvp_option_b_disposition": "ditahan_di_review_p11_d19"
+    },
+    {
+      "id": "L04-REL-10",
+      "pest_code": "P11",
+      "symptom_code": "G29",
+      "rule_code": "R11",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 3,
+      "mb_transcribed": 0.4,
+      "md_transcribed": 0.8,
+      "cf_expert_calc_mb_minus_md": -0.4,
+      "negative": true,
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P11, kode gejala G29; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R11, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "nilai MB-MD negatif; semantik penggabungan tidak didefinisikan artikel; data tabel terpecah antar halaman 454/455",
+      "mvp_option_b_disposition": "tidak_dimodelkan_cf_negatif"
+    },
+    {
+      "id": "L04-REL-11",
+      "pest_code": "P12",
+      "symptom_code": "G30",
+      "rule_code": "R12",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 1,
+      "mb_transcribed": 1,
+      "md_transcribed": 0.2,
+      "cf_expert_calc_mb_minus_md": 0.8,
+      "negative": false,
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P12, kode gejala G30; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R12, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "",
+      "mvp_option_b_disposition": "dimodelkan"
+    },
+    {
+      "id": "L04-REL-12",
+      "pest_code": "P12",
+      "symptom_code": "G31",
+      "rule_code": "R12",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 2,
+      "mb_transcribed": 0.8,
+      "md_transcribed": 0.4,
+      "cf_expert_calc_mb_minus_md": 0.4,
+      "negative": false,
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P12, kode gejala G31; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R12, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "",
+      "mvp_option_b_disposition": "dimodelkan"
+    },
+    {
+      "id": "L04-REL-13",
+      "pest_code": "P12",
+      "symptom_code": "G32",
+      "rule_code": "R12",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 3,
+      "mb_transcribed": 0.8,
+      "md_transcribed": 0.2,
+      "cf_expert_calc_mb_minus_md": 0.6,
+      "negative": false,
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P12, kode gejala G32; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R12, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "",
+      "mvp_option_b_disposition": "dimodelkan"
+    },
+    {
+      "id": "L04-REL-14",
+      "pest_code": "P13",
+      "symptom_code": "G31",
+      "rule_code": "R13",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 1,
+      "mb_transcribed": 0.8,
+      "md_transcribed": 0.4,
+      "cf_expert_calc_mb_minus_md": 0.4,
+      "negative": false,
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P13, kode gejala G31; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R13, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "",
+      "mvp_option_b_disposition": "dimodelkan"
+    },
+    {
+      "id": "L04-REL-15",
+      "pest_code": "P13",
+      "symptom_code": "G33",
+      "rule_code": "R13",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 2,
+      "mb_transcribed": 0.4,
+      "md_transcribed": 0.6,
+      "cf_expert_calc_mb_minus_md": -0.2,
+      "negative": true,
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P13, kode gejala G33; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R13, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "nilai MB-MD negatif; semantik penggabungan tidak didefinisikan artikel",
+      "mvp_option_b_disposition": "tidak_dimodelkan_cf_negatif"
+    },
+    {
+      "id": "L04-REL-16",
+      "pest_code": "P13",
+      "symptom_code": "G34",
+      "rule_code": "R13",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 3,
+      "mb_transcribed": 0.6,
+      "md_transcribed": 0.2,
+      "cf_expert_calc_mb_minus_md": 0.4,
+      "negative": false,
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P13, kode gejala G34; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R13, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "",
+      "mvp_option_b_disposition": "dimodelkan"
+    },
+    {
+      "id": "L04-REL-17",
+      "pest_code": "P14",
+      "symptom_code": "G35",
+      "rule_code": "R14",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 1,
+      "mb_transcribed": 0.4,
+      "md_transcribed": 0.6,
+      "cf_expert_calc_mb_minus_md": -0.2,
+      "negative": true,
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P14, kode gejala G35; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R14, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "nilai MB-MD negatif; semantik penggabungan tidak didefinisikan artikel",
+      "mvp_option_b_disposition": "tidak_dimodelkan_cf_negatif"
+    },
+    {
+      "id": "L04-REL-18",
+      "pest_code": "P14",
+      "symptom_code": "G36",
+      "rule_code": "R14",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 2,
+      "mb_transcribed": 1,
+      "md_transcribed": 0.2,
+      "cf_expert_calc_mb_minus_md": 0.8,
+      "negative": false,
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P14, kode gejala G36; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R14, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "",
+      "mvp_option_b_disposition": "dimodelkan"
+    },
+    {
+      "id": "L04-REL-19",
+      "pest_code": "P14",
+      "symptom_code": "G37",
+      "rule_code": "R14",
+      "rule_form": "IF ... AND ... AND ... THEN (konjungsi AND pada teks aturan; perhitungan memakai CF kombinasi, bukan min)",
+      "antecedent_position_in_rule": 3,
+      "mb_transcribed": 1,
+      "md_transcribed": 0.2,
+      "cf_expert_calc_mb_minus_md": 0.8,
+      "negative": false,
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel IV (Data Diagnosa)",
+        "locator": "kelompok baris P14, kode gejala G37; nilai MB/MD dibaca dari kolom Nilai pada urutan baris yang sama",
+        "rule_locator": "Tabel VI R14, hal. cetak 455"
+      },
+      "review_status": "draft_belum_diverifikasi",
+      "notes": "",
+      "mvp_option_b_disposition": "dimodelkan"
+    }
+  ],
+  "rules": [
+    {
+      "code": "R9",
+      "pest_code": "P9",
+      "text_printed": "IF (tanaman kerdil) AND (akar serabut tidak normal dan terdapat bulatan kecil seperti bisul berwarna putih) AND (tanaman layu) AND (tanaman roboh) THEN (Hama Hama Nematoda Akar (Heterodera marioni/ Meloidogyne javanice))",
+      "antecedent_order": [
+        "G23",
+        "G24",
+        "G12",
+        "G7"
+      ],
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel VI (Rules)",
+        "locator": "R9"
+      }
+    },
+    {
+      "code": "R10",
+      "pest_code": "P10",
+      "text_printed": "IF (daun tanaman lebih kecil dan terdapat bercak putih) AND (daun mengering) AND (terdapat larva dibagian tepi daun) THEN (Hama Penggerek Daun (Liriomyza sative Blancard (Diptera : Asgromyzidae)))",
+      "antecedent_order": [
+        "G25",
+        "G17",
+        "G26"
+      ],
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel VI (Rules)",
+        "locator": "R10"
+      }
+    },
+    {
+      "code": "R11",
+      "pest_code": "P11",
+      "text_printed": "IF (ujung ranting terdapat tusukan melingkar berwarna coklat) AND (pucuk tanaman kering) AND (bunga layu dan menghitam) THEN (Hama Kepik Tomat (Nesidiocoris (Crytopeltis) tenuis (Hemiptera : Miridae)))",
+      "antecedent_order": [
+        "G27",
+        "G28",
+        "G29"
+      ],
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel VI (Rules)",
+        "locator": "R11"
+      }
+    },
+    {
+      "code": "R12",
+      "pest_code": "P12",
+      "text_printed": "IF (buah membusuk dan terdapat larva) AND (buah berlubang) AND (buah rontok) THEN (Hama Lalat Buah (Bactocera cucurbitae (Coquillet) (Diptera : Tephritidae)))",
+      "antecedent_order": [
+        "G30",
+        "G31",
+        "G32"
+      ],
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel VI (Rules)",
+        "locator": "R12"
+      }
+    },
+    {
+      "code": "R13",
+      "pest_code": "P13",
+      "text_printed": "IF (buah berlubang) AND (terdapat bercak putih pada daun) AND (daun berlubang) THEN (Hama Ulat Grayak (Spodoptera liture F.))",
+      "antecedent_order": [
+        "G31",
+        "G33",
+        "G34"
+      ],
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel VI (Rules)",
+        "locator": "R13"
+      }
+    },
+    {
+      "code": "R14",
+      "pest_code": "P14",
+      "text_printed": "IF (terdapat bekas gigitan dipermukaan daun) AND (pangkal batang terdapat bekas gigitan) AND (terdapat ulat menggulung disekitar tanaman) THEN (Hama Ulat Tanah (Agrotis ipsilon))",
+      "antecedent_order": [
+        "G35",
+        "G36",
+        "G37"
+      ],
+      "source": {
+        "printed_page": 455,
+        "pdf_page": 5,
+        "table": "Tabel VI (Rules)",
+        "locator": "R14"
+      }
+    }
+  ],
+  "user_belief_scale_table_iii": {
+    "printed": [
+      [
+        "Sangat Yakin",
+        1
+      ],
+      [
+        "Yakin",
+        0.8
+      ],
+      [
+        "Cukup Yakin",
+        0.6
+      ],
+      [
+        "Sedikit Yakin",
+        0.4
+      ],
+      [
+        "Tidak Yakin",
+        0.2
+      ],
+      [
+        "Tidak",
+        0
+      ]
+    ],
+    "source": {
+      "printed_page": 454,
+      "pdf_page": 4,
+      "table": "Tabel III (Bobot Nilai CF)"
+    },
+    "note": "Artikel menamai 'Bobot Nilai CF' tanpa menyebut ini skala keyakinan pengguna; contoh hitung tidak memakai input pengguna. Semua MB/MD Tabel IV berada pada himpunan nilai skala ini. Peran skala: perlu klarifikasi."
+  },
+  "combination_in_article": {
+    "eq1_printed": "CF[H,E] = MB[H,E] – MD[H,E]  (hal. 453)",
+    "eq2_printed": "CF(H)=CF(H)CF(R1) + CF(R2) + [CF(R1) * CF(R2)]  (hal. 453; tampak tidak terbaca/tidak konsisten)",
+    "example_printed": "CF Combine [G1,G2] = 0.8 + 0.2 * (1 – 0.8) = 0.84 ; CF Combine [G3] = 0.84 + 0.4 * (1 – 0.84) = 0.904  (hal. 456)",
+    "example_recomputed": {
+      "step1": 0.84,
+      "step2": 0.904,
+      "matches_printed": true
+    },
+    "inconsistency": "Persamaan (2) tercetak bukan bentuk CF1 + CF2*(1-CF1) yang dipakai pada contoh; perlu klarifikasi. Penggabungan CF negatif tidak dijelaskan.",
+    "pest_example_in_article": false
+  },
+  "solutions": {
+    "provided_for": [
+      "P1"
+    ],
+    "provided_for_pests": [],
+    "source": {
+      "printed_page": 455,
+      "pdf_page": 5,
+      "table": "Tabel V (Data Solusi)"
+    }
+  },
+  "evaluation": {
+    "cases": 20,
+    "correct": 18,
+    "wrong": 2,
+    "wrong_case_numbers": [
+      6,
+      12
+    ],
+    "accuracy_printed": "90%",
+    "scope": "gabungan hama dan penyakit; rincian per kelas tidak dilaporkan",
+    "metrics_reported": [
+      "akurasi saja"
+    ],
+    "source": {
+      "printed_page": 457,
+      "pdf_page": 7,
+      "table": "Tabel VIII; rumus akurasi"
+    }
+  },
+  "decisions_2026_11_07": [
+    {
+      "id": "D-11",
+      "summary": "Opsi B: dukungan positif; 13 relasi dimodelkan, 6 negatif tidak dimodelkan"
+    },
+    {
+      "id": "D-12",
+      "summary": "Aturan AND R9-R14 diuraikan per gejala (tafsir proyek)"
+    },
+    {
+      "id": "D-13",
+      "summary": "P9 Nematoda Akar tetap masuk scope"
+    },
+    {
+      "id": "D-14",
+      "summary": "Label gejala memakai teks Tabel II"
+    },
+    {
+      "id": "D-15",
+      "summary": "Sumber tambahan untuk deskripsi/penanganan akan dicari; belum ditetapkan"
+    },
+    {
+      "id": "D-16",
+      "summary": "Klarifikasi ke penulis/pakar ditunda; menjadi batasan sistem"
+    },
+    {
+      "id": "D-17",
+      "summary": "V1: verified = bukti sumber diperiksa dan dicatat"
+    },
+    {
+      "id": "D-18",
+      "summary": "Pemeriksa manusia; LLM tidak dipakai"
+    },
+    {
+      "id": "D-19",
+      "summary": "P11 ditahan di review"
+    },
+    {
+      "id": "D-20",
+      "summary": "P12 masuk dengan catatan di deskripsi"
+    },
+    {
+      "id": "D-21",
+      "summary": "Pemeriksa: pengguna sendiri"
+    }
+  ],
+  "mvp_option_b_summary": {
+    "pests": 5,
+    "pests_included": [
+      "P9",
+      "P10",
+      "P12",
+      "P13",
+      "P14"
+    ],
+    "pests_held": [
+      "P11"
+    ],
+    "relations_modeled": 11,
+    "relations_not_modeled_negative": 6,
+    "relations_held_p11": 2,
+    "symptoms_used": 10,
+    "note": "ringkasan hitung; bukan dataset aplikasi dan bukan verified"
+  }
+}
