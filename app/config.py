@@ -20,6 +20,7 @@ class AppConfig:
     backend: Backend = "json"
     database_url: str | None = None
     knowledge_version: str | None = None
+    persist_consultations: bool = False
 
 
 def read_config() -> AppConfig:
@@ -35,6 +36,12 @@ def read_config() -> AppConfig:
         raise ValueError("KNOWLEDGE_BACKEND must be json or postgres")
     database_url = os.environ.get("DATABASE_URL") if backend == "postgres" else None
     version = os.environ.get("KNOWLEDGE_VERSION") if backend == "postgres" else None
+    persist_raw = os.environ.get("PERSIST_CONSULTATIONS", "false")
+    if persist_raw not in ("true", "false"):
+        raise ValueError("PERSIST_CONSULTATIONS must be true or false")
+    persist_consultations = persist_raw == "true"
+    if persist_consultations and backend != "postgres":
+        raise ValueError("PERSIST_CONSULTATIONS requires postgres backend")
     if backend == "postgres" and (mode != "verified" or not database_url or not version):
         raise ValueError("Postgres requires verified mode, DATABASE_URL and KNOWLEDGE_VERSION")
     return AppConfig(
@@ -44,4 +51,5 @@ def read_config() -> AppConfig:
         backend=backend,
         database_url=database_url,
         knowledge_version=version,
+        persist_consultations=persist_consultations,
     )

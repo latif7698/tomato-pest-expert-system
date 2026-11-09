@@ -62,7 +62,7 @@ def create_consultation(payload: ConsultationRequest, request: Request) -> Consu
             detail={"error": {"code": "invalid_input", "message": "Input konsultasi tidak valid."}},
         ) from exc
     engine = request.app.state.db_engine
-    if engine is not None:
+    if engine is not None and request.app.state.persist_consultations:
         try:
             save_consultation(engine, payload, result)
         except SQLAlchemyError as exc:

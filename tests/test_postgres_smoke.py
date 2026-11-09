@@ -28,6 +28,7 @@ def test_postgres_import_and_consultation():
                 backend="postgres",
                 database_url=url,
                 knowledge_version=knowledge.knowledge_version,
+                persist_consultations=True,
             ),
             engine=engine,
         )

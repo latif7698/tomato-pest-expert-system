@@ -4,7 +4,7 @@
 
 - JSON L04 yang diperiksa manusia tetap jejak sumber dalam Git. Impor eksplisit hanya menerima mode `verified` dan membuat snapshot tak dapat ditimpa berdasarkan `knowledge_version` dan SHA-256 kanonis; perubahan konten harus memakai versi baru dan audit baru.
 - Tabel `knowledge_snapshots`, `knowledge_sources`, `knowledge_pests`, `knowledge_symptoms`, `knowledge_rules` menyimpan isi snapshot dan urutan asli. Pembacaan memvalidasi skema Pydantic dan hash. P11 serta enam relasi negatif tetap di data review, tidak diimpor.
-- `consultations` menyimpan UUID internal, waktu, versi snapshot, observasi dan hasil CF (JSONB), tanpa akun, IP, atau nama. Tidak ada API untuk melihat seluruh konsultasi. Data ini **bukan** pengganti kasus evaluasi berlabel pakar. Sampai B-16 selesai, jangan mengaktifkan pengumpulan riwayat untuk penggunaan umum tanpa kebijakan retensi/penghapusan.
+- `consultations` dapat menyimpan UUID internal, waktu, versi snapshot, observasi dan hasil CF (JSONB), tanpa akun, IP, atau nama. Tidak ada API untuk melihat seluruh konsultasi. Penyimpanan konsultasi **mati secara default**, termasuk pada Render; aktif hanya bila `PERSIST_CONSULTATIONS=true` dengan backend PostgreSQL. Data ini **bukan** pengganti kasus evaluasi berlabel pakar. Sampai B-16 selesai, jangan aktifkan opsi tersebut untuk layanan umum tanpa kebijakan retensi/penghapusan.
 - Mode demo tetap memakai JSON sintetis. Mode JSON verified juga tetap dapat dipakai untuk pengembangan lokal dan tes browser. Backend PostgreSQL gagal saat versi hilang/berubah atau DB gagal, tanpa fallback.
 
 ## Menyiapkan database
@@ -27,7 +27,7 @@ Pastikan URL langsung dan pooled menunjuk **database dan branch Neon yang sama**
 
 1. Jalankan workflow `.github/workflows/ci.yml` pada PR: Ruff, tes Python dan migrasi/impor/tes di PostgreSQL terisolasi, plus browser verified memakai JSON. Tes browser database terhadap Neon belum otomatis.
 2. Buat Neon production branch/database dan jalankan migrasi serta impor dengan URL langsung setelah review. Siapkan backup dan pastikan versi snapshot ada **sebelum** mengaktifkan service dengan backend postgres.
-3. Buat layanan Render dari `render.yaml`. Atur `DATABASE_URL` secara rahasia di Render memakai URL pooled Neon. `KNOWLEDGE_VERSION`, mode, dan backend ada pada blueprint. Periksa aturan deploy `checksPass` dan hasil CI sebelum membiarkan `main` deploy otomatis.
+3. Buat layanan Render dari `render.yaml`. Atur `DATABASE_URL` secara rahasia di Render memakai URL pooled Neon. `KNOWLEDGE_VERSION`, mode, dan backend ada pada blueprint. Jangan atur `PERSIST_CONSULTATIONS=true` sampai B-16 selesai. Periksa aturan deploy `checksPass` dan hasil CI sebelum membiarkan `main` deploy otomatis.
 4. URL langsung untuk migrasi tidak perlu disimpan pada web service Render. Bila nanti memakai pre-deploy command (tersedia pada paket Render tertentu), kaji urutan dan akses secret khusus migrasi. Untuk layanan tanpa fitur itu, migrasi produksi merupakan langkah operator terpisah dan harus dilakukan sebelum rilis yang membutuhkannya.
 5. Pastikan `/healthz` merespons 200 dan uji konsultasi UI mode verified pada URL Render. Periksa log tanpa mencetak URL database. Belum ada tindakan membuat Neon/Render atau deploy production dalam perubahan kode ini.
 

@@ -35,6 +35,7 @@ def create_app(config: AppConfig | None = None, *, engine: Engine | None = None)
     app = FastAPI(title="Sistem Pakar Identifikasi Hama Tomat", version="0.1.0")
     app.state.knowledge = knowledge
     app.state.db_engine = engine if selected.backend == "postgres" else None
+    app.state.persist_consultations = selected.persist_consultations
     app.include_router(router)
 
     @app.get("/", include_in_schema=False)

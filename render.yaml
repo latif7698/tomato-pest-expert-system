@@ -14,5 +14,7 @@ services:
         value: postgres
       - key: KNOWLEDGE_VERSION
         value: l04-2026-11-08-v1
+      - key: PERSIST_CONSULTATIONS
+        value: "false"
       - key: DATABASE_URL
         sync: false
