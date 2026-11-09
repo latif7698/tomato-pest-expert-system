@@ -31,13 +31,14 @@ def verified():
     )
 
 
-def db_app(engine, knowledge):
+def db_app(engine, knowledge, *, persist_consultations=False):
     config = AppConfig(
         mode="verified",
         data_root=Path("unused"),
         knowledge_path=Path("unused"),
         backend="postgres",
         knowledge_version=knowledge.knowledge_version,
+        persist_consultations=persist_consultations,
     )
     return create_app(config, engine=engine)
 
@@ -94,7 +95,9 @@ def test_missing_or_modified_snapshot_fails_closed(engine, verified):
 def test_database_consultation_matches_json_and_persists_anonymously(engine, verified):
     import_snapshot(engine, verified)
     observations = [{"symptom_id": verified.rules[0].symptom_id, "cf_user": 1.0}]
-    db_response = post(db_app(engine, verified), {"observations": observations})
+    db_response = post(
+        db_app(engine, verified, persist_consultations=True), {"observations": observations}
+    )
     json_app = create_app(
         AppConfig(
             mode="verified",
@@ -122,7 +125,7 @@ def test_database_consultation_matches_json_and_persists_anonymously(engine, ver
 
 def test_no_support_is_recorded_and_invalid_input_is_not(engine, verified):
     import_snapshot(engine, verified)
-    app = db_app(engine, verified)
+    app = db_app(engine, verified, persist_consultations=True)
     assert post(app, {"observations": []}).json()["status"] == "no_support"
     assert post(app, {"observations": [{"symptom_id": "bad", "cf_user": 1}]}).status_code == 422
     with engine.connect() as connection:
@@ -131,7 +134,7 @@ def test_no_support_is_recorded_and_invalid_input_is_not(engine, verified):
 
 def test_failed_write_reports_503_without_false_success(engine, verified):
     import_snapshot(engine, verified)
-    app = db_app(engine, verified)
+    app = db_app(engine, verified, persist_consultations=True)
     with engine.begin() as connection:
         consultations.drop(connection)
     response = post(app, {"observations": []})
@@ -152,6 +155,24 @@ def test_failed_health_reports_503(engine, verified):
     response = request_app(app, "GET", "/healthz")
     assert response.status_code == 503
     assert response.json()["error"]["code"] == "storage_unavailable"
+
+
+def test_database_consultation_does_not_store_history_by_default(engine, verified):
+    import_snapshot(engine, verified)
+    app = db_app(engine, verified)
+    assert post(app, {"observations": []}).status_code == 200
+    with engine.connect() as connection:
+        assert connection.scalar(select(func.count()).select_from(consultations)) == 0
+
+
+def test_persistence_requires_explicit_postgres_mode(monkeypatch):
+    monkeypatch.setenv("PERSIST_CONSULTATIONS", "true")
+    monkeypatch.setenv("KNOWLEDGE_BACKEND", "json")
+    with pytest.raises(ValueError, match="requires postgres"):
+        read_config()
+    monkeypatch.setenv("PERSIST_CONSULTATIONS", "yes")
+    with pytest.raises(ValueError, match="must be true or false"):
+        read_config()
 
 
 def test_config_requires_explicit_database_mode(monkeypatch):
